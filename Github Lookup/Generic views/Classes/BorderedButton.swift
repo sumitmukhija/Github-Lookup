@@ -15,11 +15,14 @@ import UIKit
             updateUI()
         }
     }
+    
     @IBInspectable var color: UIColor = COLORS.GIT_BLACK{
         didSet{
             updateUI()
         }
     }
+    
+
     @IBInspectable var width: CGFloat = 2.0{
         didSet{
             updateUI()

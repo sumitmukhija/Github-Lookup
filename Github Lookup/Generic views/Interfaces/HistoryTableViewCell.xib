@@ -16,7 +16,7 @@
                 <frame key="frameInset" width="673" height="61.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zel-vY-FMR">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_redo_history" translatesAutoresizingMaskIntoConstraints="NO" id="Zel-vY-FMR">
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="W2w-Uu-rjS"/>
                             <constraint firstAttribute="width" constant="40" id="pmd-HJ-9gi"/>
@@ -44,7 +44,14 @@
                     <constraint firstAttribute="leadingMargin" secondItem="Zel-vY-FMR" secondAttribute="leading" id="qlH-r1-GH4"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="lblName" destination="nMy-Jc-QBg" id="N9y-ip-DDD"/>
+                <outlet property="lblOrganization" destination="d9o-KM-l2j" id="ulT-sQ-ANW"/>
+            </connections>
             <point key="canvasLocation" x="-46.5" y="-50"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="icon_redo_history" width="64" height="64"/>
+    </resources>
 </document>

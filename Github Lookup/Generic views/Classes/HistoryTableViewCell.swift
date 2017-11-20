@@ -9,5 +9,7 @@
 import UIKit
 
 class HistoryTableViewCell: UITableViewCell {
+    @IBOutlet weak var lblName: UILabel!
     
+    @IBOutlet weak var lblOrganization: UILabel!
 }

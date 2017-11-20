@@ -28,21 +28,21 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        searchFilteredArray = data.filter({ (text) -> Bool in
-            let tmp: NSString = text
-            let range = tmp.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
-            return range.location != NSNotFound
-        })
-        if(searchFilteredArray.count == 0){
-            isSearchActive = false;
-        } else {
-            isSearchActive = true;
-        }
+//        searchFilteredArray = data.filter({ (text) -> Bool in
+//            let tmp: NSString = text
+//            let range = tmp.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+//            return range.location != NSNotFound
+//        })
+//        if(searchFilteredArray.count == 0){
+//            isSearchActive = false;
+//        } else {
+//            isSearchActive = true;
+//        }
         self.tableViewOutlet.reloadData()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
