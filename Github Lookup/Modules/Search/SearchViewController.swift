@@ -12,8 +12,8 @@ class SearchViewController: BaseTabViewController, UICollectionViewDelegate, UIC
     
     var isSearchActive: Bool? = false
     var searchFilteredArray: [String] = []
-    let tilesTitle = ["Searches", "Saved", "Viewed"]
-    let colors = [COLORS.MAT_CYAN, COLORS.MAT_TEAL, COLORS.MAT_INDIGO]
+    let tilesTitle = [TITLES.SEARCH, GEN_STRINGS.SAVED, GEN_STRINGS.VIEWED]
+    let colors = [COLORS.MAT_CYAN, COLORS.MAT_TEAL, COLORS.MAT_AMBER]
     
     
     @IBOutlet weak var tableViewOutlet: UITableView!
@@ -25,6 +25,12 @@ class SearchViewController: BaseTabViewController, UICollectionViewDelegate, UIC
         super.viewDidLoad()
         self.title = TITLES.SEARCH
         initializeTileCollectionView()
+        initializeSearchTableView()
+    }
+    
+    func initializeSearchTableView()
+    {
+        tableViewOutlet.separatorStyle = .none
         tableViewOutlet.delegate = self
         tableViewOutlet.dataSource = self
         searchBarOutlet.delegate = self

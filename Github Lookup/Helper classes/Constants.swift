@@ -15,9 +15,14 @@ struct COLORS
     static let GIT_BLACK = UIColor(red: 37/255.0, green: 41/255.0, blue: 46/255.0, alpha: 1.0)
     static let MAT_CYAN = UIColor(red: 0/255.0, green: 188/255.0, blue: 212/255.0, alpha: 1.0)
     static let MAT_TEAL = UIColor(red: 0/255.0, green: 150/255.0, blue: 136/255.0, alpha: 1.0)
-    static let MAT_INDIGO = UIColor(red: 255/255.0, green: 193/255.0, blue: 7/255.0, alpha: 1.0)
+    static let MAT_AMBER = UIColor(red: 255/255.0, green: 193/255.0, blue: 7/255.0, alpha: 1.0)
 }
 
+struct GEN_STRINGS
+{
+    static let VIEWED = "Viewed"
+    static let SAVED = "Saved"
+}
 
 struct TITLES
 {
