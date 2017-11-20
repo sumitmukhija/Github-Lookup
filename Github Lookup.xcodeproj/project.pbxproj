@@ -10,6 +10,12 @@
 		9567FE241FC2E88000C39FD1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9567FE231FC2E88000C39FD1 /* SearchViewController.swift */; };
 		9567FE281FC2F08C00C39FD1 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9567FE271FC2F08C00C39FD1 /* BookmarksViewController.swift */; };
 		9567FE2A1FC2F0C300C39FD1 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9567FE291FC2F0C300C39FD1 /* HistoryViewController.swift */; };
+		9567FE2C1FC2F31F00C39FD1 /* TileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9567FE2B1FC2F31F00C39FD1 /* TileCollectionViewCell.xib */; };
+		9567FE2E1FC2F33500C39FD1 /* TileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9567FE2D1FC2F33500C39FD1 /* TileCollectionViewCell.swift */; };
+		9567FE341FC2FAE900C39FD1 /* TileCollectionViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9567FE331FC2FAE900C39FD1 /* TileCollectionViewHandler.swift */; };
+		9567FE361FC30CA100C39FD1 /* SearchOperationAndTableHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9567FE351FC30CA100C39FD1 /* SearchOperationAndTableHandler.swift */; };
+		9567FE381FC31A1A00C39FD1 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9567FE371FC31A1A00C39FD1 /* HistoryTableViewCell.xib */; };
+		9567FE3A1FC31BD800C39FD1 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9567FE391FC31BD800C39FD1 /* HistoryTableViewCell.swift */; };
 		95B4BC191FC2C8660045D732 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B4BC181FC2C8660045D732 /* AppDelegate.swift */; };
 		95B4BC1E1FC2C8660045D732 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95B4BC1C1FC2C8660045D732 /* Main.storyboard */; };
 		95B4BC231FC2C8660045D732 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95B4BC221FC2C8660045D732 /* Assets.xcassets */; };
@@ -25,6 +31,12 @@
 		9567FE231FC2E88000C39FD1 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		9567FE271FC2F08C00C39FD1 /* BookmarksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		9567FE291FC2F0C300C39FD1 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		9567FE2B1FC2F31F00C39FD1 /* TileCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TileCollectionViewCell.xib; sourceTree = "<group>"; };
+		9567FE2D1FC2F33500C39FD1 /* TileCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileCollectionViewCell.swift; sourceTree = "<group>"; };
+		9567FE331FC2FAE900C39FD1 /* TileCollectionViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileCollectionViewHandler.swift; sourceTree = "<group>"; };
+		9567FE351FC30CA100C39FD1 /* SearchOperationAndTableHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchOperationAndTableHandler.swift; sourceTree = "<group>"; };
+		9567FE371FC31A1A00C39FD1 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
+		9567FE391FC31BD800C39FD1 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		95B4BC151FC2C8660045D732 /* Github Lookup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Github Lookup.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95B4BC181FC2C8660045D732 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95B4BC1D1FC2C8660045D732 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -53,6 +65,8 @@
 			isa = PBXGroup;
 			children = (
 				9567FE231FC2E88000C39FD1 /* SearchViewController.swift */,
+				9567FE331FC2FAE900C39FD1 /* TileCollectionViewHandler.swift */,
+				9567FE351FC30CA100C39FD1 /* SearchOperationAndTableHandler.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -161,6 +175,8 @@
 			isa = PBXGroup;
 			children = (
 				95B4BC411FC2CE9E0045D732 /* BorderedButton.swift */,
+				9567FE2D1FC2F33500C39FD1 /* TileCollectionViewCell.swift */,
+				9567FE391FC31BD800C39FD1 /* HistoryTableViewCell.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -170,6 +186,8 @@
 			children = (
 				95B4BC1C1FC2C8660045D732 /* Main.storyboard */,
 				95B4BC241FC2C8660045D732 /* LaunchScreen.storyboard */,
+				9567FE2B1FC2F31F00C39FD1 /* TileCollectionViewCell.xib */,
+				9567FE371FC31A1A00C39FD1 /* HistoryTableViewCell.xib */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -250,6 +268,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9567FE2C1FC2F31F00C39FD1 /* TileCollectionViewCell.xib in Resources */,
+				9567FE381FC31A1A00C39FD1 /* HistoryTableViewCell.xib in Resources */,
 				95B4BC261FC2C8660045D732 /* LaunchScreen.storyboard in Resources */,
 				95B4BC231FC2C8660045D732 /* Assets.xcassets in Resources */,
 				95B4BC1E1FC2C8660045D732 /* Main.storyboard in Resources */,
@@ -263,12 +283,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9567FE361FC30CA100C39FD1 /* SearchOperationAndTableHandler.swift in Sources */,
 				9567FE281FC2F08C00C39FD1 /* BookmarksViewController.swift in Sources */,
+				9567FE3A1FC31BD800C39FD1 /* HistoryTableViewCell.swift in Sources */,
 				95B4BC401FC2CE150045D732 /* BaseViewController.swift in Sources */,
 				9567FE241FC2E88000C39FD1 /* SearchViewController.swift in Sources */,
 				95B4BC191FC2C8660045D732 /* AppDelegate.swift in Sources */,
 				95B4BC421FC2CE9E0045D732 /* BorderedButton.swift in Sources */,
+				9567FE341FC2FAE900C39FD1 /* TileCollectionViewHandler.swift in Sources */,
 				95B4BC321FC2CA910045D732 /* LandingViewController.swift in Sources */,
+				9567FE2E1FC2F33500C39FD1 /* TileCollectionViewCell.swift in Sources */,
 				9567FE2A1FC2F0C300C39FD1 /* HistoryViewController.swift in Sources */,
 				95B4BC3B1FC2CB170045D732 /* Github_Lookup.xcdatamodeld in Sources */,
 				95B4BC3D1FC2CB510045D732 /* Constants.swift in Sources */,
