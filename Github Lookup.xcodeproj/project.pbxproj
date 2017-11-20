@@ -13,7 +13,7 @@
 		9567FE2C1FC2F31F00C39FD1 /* TileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9567FE2B1FC2F31F00C39FD1 /* TileCollectionViewCell.xib */; };
 		9567FE2E1FC2F33500C39FD1 /* TileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9567FE2D1FC2F33500C39FD1 /* TileCollectionViewCell.swift */; };
 		9567FE341FC2FAE900C39FD1 /* TileCollectionViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9567FE331FC2FAE900C39FD1 /* TileCollectionViewHandler.swift */; };
-		9567FE361FC30CA100C39FD1 /* SearchOperationAndTableHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9567FE351FC30CA100C39FD1 /* SearchOperationAndTableHandler.swift */; };
+		9567FE361FC30CA100C39FD1 /* SearchAndTableHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9567FE351FC30CA100C39FD1 /* SearchAndTableHandler.swift */; };
 		9567FE381FC31A1A00C39FD1 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9567FE371FC31A1A00C39FD1 /* HistoryTableViewCell.xib */; };
 		9567FE3A1FC31BD800C39FD1 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9567FE391FC31BD800C39FD1 /* HistoryTableViewCell.swift */; };
 		9567FE3E1FC31D2000C39FD1 /* UserSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9567FE3D1FC31D2000C39FD1 /* UserSearchTableViewCell.xib */; };
@@ -37,7 +37,7 @@
 		9567FE2B1FC2F31F00C39FD1 /* TileCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TileCollectionViewCell.xib; sourceTree = "<group>"; };
 		9567FE2D1FC2F33500C39FD1 /* TileCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileCollectionViewCell.swift; sourceTree = "<group>"; };
 		9567FE331FC2FAE900C39FD1 /* TileCollectionViewHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TileCollectionViewHandler.swift; sourceTree = "<group>"; };
-		9567FE351FC30CA100C39FD1 /* SearchOperationAndTableHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchOperationAndTableHandler.swift; sourceTree = "<group>"; };
+		9567FE351FC30CA100C39FD1 /* SearchAndTableHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchAndTableHandler.swift; sourceTree = "<group>"; };
 		9567FE371FC31A1A00C39FD1 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
 		9567FE391FC31BD800C39FD1 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		9567FE3D1FC31D2000C39FD1 /* UserSearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserSearchTableViewCell.xib; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 			children = (
 				9567FE231FC2E88000C39FD1 /* SearchViewController.swift */,
 				9567FE331FC2FAE900C39FD1 /* TileCollectionViewHandler.swift */,
-				9567FE351FC30CA100C39FD1 /* SearchOperationAndTableHandler.swift */,
+				9567FE351FC30CA100C39FD1 /* SearchAndTableHandler.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -293,7 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9567FE361FC30CA100C39FD1 /* SearchOperationAndTableHandler.swift in Sources */,
+				9567FE361FC30CA100C39FD1 /* SearchAndTableHandler.swift in Sources */,
 				9567FE401FC32A5600C39FD1 /* CircularView.swift in Sources */,
 				9567FE281FC2F08C00C39FD1 /* BookmarksViewController.swift in Sources */,
 				9567FE3A1FC31BD800C39FD1 /* HistoryTableViewCell.swift in Sources */,

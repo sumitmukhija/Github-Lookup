@@ -10,6 +10,7 @@ import UIKit
 
 class TileCollectionViewCell: UICollectionViewCell
 {
+    @IBOutlet weak var wrapperView: UIView!
     @IBOutlet weak var lblNumber: UILabel!
     @IBOutlet weak var lblText: UILabel!
 }
