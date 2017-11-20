@@ -1,26 +1,111 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1611" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Landing View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LandingViewController" customModule="Github_Lookup" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ffa-Gv-JtW">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_git_logo" translatesAutoresizingMaskIntoConstraints="NO" id="bT5-GD-eRS">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="J69-1g-JXB"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IGG-S0-9JY" customClass="BorderedButton" customModule="Github_Lookup" customModuleProvider="target">
+                                        <color key="backgroundColor" red="0.1450980392" green="0.16078431369999999" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="SEARCH">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="14" name="Avenir-Light"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="0.14509803921568626" green="0.16078431372549018" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="width">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HsR-cQ-p5s" customClass="BorderedButton" customModule="Github_Lookup" customModuleProvider="target">
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="ABOUT">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.14509803921568626" green="0.16078431372549018" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="13" name="Avenir-Light"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="0.1450980392" green="0.16078431369999999" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="width">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="bT5-GD-eRS" firstAttribute="centerY" secondItem="Ffa-Gv-JtW" secondAttribute="centerY" constant="-40" id="22k-m4-E2v"/>
+                                    <constraint firstItem="HsR-cQ-p5s" firstAttribute="height" secondItem="IGG-S0-9JY" secondAttribute="height" id="6dS-n4-HIC"/>
+                                    <constraint firstItem="bT5-GD-eRS" firstAttribute="width" secondItem="Ffa-Gv-JtW" secondAttribute="width" multiplier="1:1.5" id="Clt-k2-G23"/>
+                                    <constraint firstItem="HsR-cQ-p5s" firstAttribute="centerY" secondItem="IGG-S0-9JY" secondAttribute="centerY" id="M40-xA-jkn"/>
+                                    <constraint firstItem="IGG-S0-9JY" firstAttribute="width" secondItem="Ffa-Gv-JtW" secondAttribute="width" multiplier="1:2.3" id="V6m-ix-A6B"/>
+                                    <constraint firstItem="HsR-cQ-p5s" firstAttribute="width" secondItem="IGG-S0-9JY" secondAttribute="width" id="a5x-qf-JRR"/>
+                                    <constraint firstItem="IGG-S0-9JY" firstAttribute="leading" secondItem="Ffa-Gv-JtW" secondAttribute="leading" constant="16" id="ds6-gH-1EC"/>
+                                    <constraint firstAttribute="bottom" secondItem="IGG-S0-9JY" secondAttribute="bottom" constant="25" id="k58-ha-2da"/>
+                                    <constraint firstItem="bT5-GD-eRS" firstAttribute="centerX" secondItem="Ffa-Gv-JtW" secondAttribute="centerX" id="qaG-vm-OZw"/>
+                                    <constraint firstItem="IGG-S0-9JY" firstAttribute="height" secondItem="Ffa-Gv-JtW" secondAttribute="height" multiplier="1:18" id="vpB-hk-Xp9"/>
+                                    <constraint firstAttribute="trailing" secondItem="HsR-cQ-p5s" secondAttribute="trailing" constant="16" id="xnV-Xq-K1N"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ffa-Gv-JtW" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="BtX-AF-AoN"/>
+                            <constraint firstItem="Ffa-Gv-JtW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FE3-oY-V3V"/>
+                            <constraint firstItem="Ffa-Gv-JtW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kdw-hv-0Lm"/>
+                            <constraint firstItem="Ffa-Gv-JtW" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="mtd-NJ-B66"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-138" y="-86"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="img_git_logo" width="1125" height="417"/>
+    </resources>
 </document>
