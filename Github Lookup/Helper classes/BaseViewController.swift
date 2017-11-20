@@ -8,28 +8,39 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
+class BaseTabViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = COLORS.APP_BACKGROUND
-        hideNavigation()
+        setTabAttribs()
+        setNavAttribs()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.hideTabTitle()
     }
     
     func setTabAttribs(){
         self.tabBarController?.tabBar.isTranslucent = false
         self.tabBarController?.tabBar.barTintColor = COLORS.APP_BACKGROUND
+        self.tabBarController?.tabBar.tintColor = COLORS.GIT_BLACK
         self.tabBarController?.tabBar.shadowImage = UIImage()
         self.tabBarController?.tabBar.backgroundImage = UIImage()
+    }
+    
+    func hideTabTitle()
+    {
+        self.tabBarController?.tabBar.items?.forEach {
+            $0.title = " "
+            $0.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
+        }
     }
     
     func setNavAttribs()
     {
         self.navigationController?.navigationBar.isTranslucent = false
-        self.navigationController?.navigationBar.barTintColor = COLORS.APP_BLUE
+        self.navigationController?.navigationBar.barTintColor = COLORS.GIT_BLACK
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
     }
     

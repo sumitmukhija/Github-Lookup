@@ -108,10 +108,10 @@
             </objects>
             <point key="canvasLocation" x="617" y="-100"/>
         </scene>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="YYH-o4-jWP">
             <objects>
-                <viewController id="rUO-9w-wdd" sceneMemberID="viewController">
+                <viewController id="rUO-9w-wdd" customClass="SearchViewController" customModule="Github_Lookup" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SdV-F9-gG5"/>
                         <viewControllerLayoutGuide type="bottom" id="Yo6-u2-YM4"/>
@@ -127,11 +127,49 @@
             </objects>
             <point key="canvasLocation" x="3362.4000000000001" y="-100.29985007496252"/>
         </scene>
-        <!--Item-->
+        <!--Bookmarks View Controller-->
+        <scene sceneID="0RH-xu-eo3">
+            <objects>
+                <viewController id="RYu-hJ-nLD" customClass="BookmarksViewController" customModule="Github_Lookup" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Uej-05-VFq"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Mw-cK-Tdb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e66-Qh-cRI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xay-SE-N2z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xes-oo-O2F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3362" y="573"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="1KO-wU-Z6Y">
+            <objects>
+                <viewController id="Z25-En-qmF" customClass="HistoryViewController" customModule="Github_Lookup" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="359-l6-HoZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="1wZ-DR-UYo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="whS-Pv-eAi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aBq-Md-hBg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ddk-q3-vba" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3361" y="1279"/>
+        </scene>
+        <!--Navigation Controller-->
         <scene sceneID="nyd-nY-U6s">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tra-6N-cg1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="3XH-m9-Zh3"/>
+                    <tabBarItem key="tabBarItem" title="" image="tab_img_search" id="3XH-m9-Zh3"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jfi-H9-J8g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -157,14 +195,57 @@
                     </tabBar>
                     <connections>
                         <segue destination="tra-6N-cg1" kind="relationship" relationship="viewControllers" id="E1e-Zc-VS1"/>
+                        <segue destination="Vkm-NJ-2qd" kind="relationship" relationship="viewControllers" id="eoG-c6-nVk"/>
+                        <segue destination="Cwb-Kx-t7x" kind="relationship" relationship="viewControllers" id="oUO-Ks-xxw"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t4w-62-nzL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1484" y="-100.29985007496252"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7mb-eZ-tqU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vkm-NJ-2qd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="tab_img_bookmarks" id="LYh-Jg-v6w"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FFf-ZN-eak">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RYu-hJ-nLD" kind="relationship" relationship="rootViewController" id="gNQ-cW-bq4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WI7-xG-jUW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2383" y="600"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6ra-D3-aHd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cwb-Kx-t7x" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="tab_img_history" id="JQV-Et-tqK"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qDY-Nd-xAp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Z25-En-qmF" kind="relationship" relationship="rootViewController" id="tat-IV-OLL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PdK-Gb-jMr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2423" y="1279"/>
+        </scene>
     </scenes>
     <resources>
         <image name="img_git_logo" width="1125" height="417"/>
+        <image name="tab_img_bookmarks" width="32" height="32"/>
+        <image name="tab_img_history" width="32" height="32"/>
+        <image name="tab_img_search" width="32" height="32"/>
     </resources>
 </document>
