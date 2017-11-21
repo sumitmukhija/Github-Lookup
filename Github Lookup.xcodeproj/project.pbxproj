@@ -21,6 +21,7 @@
 		9567FE401FC32A5600C39FD1 /* CircularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9567FE3F1FC32A5600C39FD1 /* CircularView.swift */; };
 		9567FE421FC3323900C39FD1 /* UserSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9567FE411FC3323900C39FD1 /* UserSearchTableViewCell.swift */; };
 		959A82961FC33F0A002F96A7 /* digital-7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 959A82951FC33F0A002F96A7 /* digital-7.ttf */; };
+		95A121261FC3E0B2001DC9DD /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A121251FC3E0B2001DC9DD /* ServerManager.swift */; };
 		95B4BC191FC2C8660045D732 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B4BC181FC2C8660045D732 /* AppDelegate.swift */; };
 		95B4BC1E1FC2C8660045D732 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95B4BC1C1FC2C8660045D732 /* Main.storyboard */; };
 		95B4BC231FC2C8660045D732 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95B4BC221FC2C8660045D732 /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		9567FE3F1FC32A5600C39FD1 /* CircularView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularView.swift; sourceTree = "<group>"; };
 		9567FE411FC3323900C39FD1 /* UserSearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchTableViewCell.swift; sourceTree = "<group>"; };
 		959A82951FC33F0A002F96A7 /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7.ttf"; sourceTree = "<group>"; };
+		95A121251FC3E0B2001DC9DD /* ServerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
 		95B4BC151FC2C8660045D732 /* Github Lookup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Github Lookup.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95B4BC181FC2C8660045D732 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95B4BC1D1FC2C8660045D732 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			children = (
 				95B4BC3E1FC2CE020045D732 /* Base classes */,
 				95B4BC3C1FC2CB510045D732 /* Constants.swift */,
+				95A121251FC3E0B2001DC9DD /* ServerManager.swift */,
 			);
 			path = "Helper classes";
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95A121261FC3E0B2001DC9DD /* ServerManager.swift in Sources */,
 				9567FE361FC30CA100C39FD1 /* SearchTableViewHandler.swift in Sources */,
 				9567FE401FC32A5600C39FD1 /* CircularView.swift in Sources */,
 				9567FE281FC2F08C00C39FD1 /* BookmarksViewController.swift in Sources */,
