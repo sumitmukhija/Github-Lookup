@@ -34,16 +34,21 @@ struct GEN_STRINGS
 struct TITLES
 {
     static let SEARCH = "Search"
+    static let HISTORY = "History"
 }
 
 struct IDENTIFIERS
 {
     static let SEARCH_TABLE_HEAD = "searchTableHeader"
+    static let HISTORY_CELL_ID = "historyTableViewCell"
     static let SEARCH_TABLE_CELL = "searchTableCell"
     static let TILE_COLLECTION_CELL = "tileCollectionViewCell"
     static let DEF_SEARCH_COUNT = "searchCount"
     static let DEF_VIEW_COUNT = "viewCount"
     static let DEF_SAVE_COUNT = "saveCount"
+    static let CD_ENTITY_HISTORY = "History"
+    static let CD_HISTORY_ATTRIB_QUERY = "query"
+    static let CD_HISTORY_ATTRIB_WHEN = "dateTime"
 }
 
 struct URL_STRINGS
@@ -53,6 +58,7 @@ struct URL_STRINGS
 
 struct FILE_NAMES
 {
+    static let HISTORY_TABLE_CELL = "HistoryTableViewCell"
     static let SEARCH_TABLE_CELL = "UserSearchTableViewCell"
     static let TILE_COLLECTION_CELL = "TileCollectionViewCell"
 }

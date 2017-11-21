@@ -141,7 +141,7 @@
                                 <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" placeholder="Search for a GitHub user" id="4kE-FN-Nbz">
                                     <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert"/>
                                     <connections>
                                         <outlet property="delegate" destination="rUO-9w-wdd" id="5KI-nc-SWX"/>
                                     </connections>
@@ -244,13 +244,27 @@
                     <view key="view" contentMode="scaleToFill" id="whS-Pv-eAi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="39K-Tr-Rup">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="39K-Tr-Rup" firstAttribute="height" secondItem="whS-Pv-eAi" secondAttribute="height" id="9fy-Th-XcG"/>
+                            <constraint firstItem="39K-Tr-Rup" firstAttribute="centerX" secondItem="whS-Pv-eAi" secondAttribute="centerX" id="tnL-Ir-4dg"/>
+                            <constraint firstItem="39K-Tr-Rup" firstAttribute="centerY" secondItem="whS-Pv-eAi" secondAttribute="centerY" id="x51-v1-sux"/>
+                            <constraint firstItem="39K-Tr-Rup" firstAttribute="width" secondItem="whS-Pv-eAi" secondAttribute="width" id="xTK-gT-Cw1"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aBq-Md-hBg"/>
+                    <connections>
+                        <outlet property="historyTableView" destination="39K-Tr-Rup" id="JiJ-WD-cWH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ddk-q3-vba" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3361" y="1279"/>
+            <point key="canvasLocation" x="3360.8000000000002" y="1278.7106446776613"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nyd-nY-U6s">

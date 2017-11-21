@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="10" id="qje-aw-Ppy" customClass="HistoryTableViewCell" customModule="Github_Lookup" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="historyTableViewCell" rowHeight="10" id="qje-aw-Ppy" customClass="HistoryTableViewCell" customModule="Github_Lookup" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="673" height="62"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qje-aw-Ppy" id="Pjt-Yx-8C3">
@@ -18,8 +18,8 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_redo_history" translatesAutoresizingMaskIntoConstraints="NO" id="Zel-vY-FMR">
                         <constraints>
-                            <constraint firstAttribute="height" constant="40" id="W2w-Uu-rjS"/>
-                            <constraint firstAttribute="width" constant="40" id="pmd-HJ-9gi"/>
+                            <constraint firstAttribute="height" constant="16" id="W2w-Uu-rjS"/>
+                            <constraint firstAttribute="width" constant="16" id="pmd-HJ-9gi"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMy-Jc-QBg">

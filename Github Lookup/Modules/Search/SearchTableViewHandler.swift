@@ -29,6 +29,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
                 if let _ = usr
                 {
                     UserDefaultsHelper.addSearchCount()
+                    CoreDataHelper.saveHistory(query: usr!.login!)
                     self.dataArray.removeAll()
                     self.dataArray.append(usr!)
                     self.tableViewOutlet.reloadData()
