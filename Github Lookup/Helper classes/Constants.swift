@@ -8,6 +8,12 @@
 
 import UIKit
 
+enum OPMODE
+{
+    case FOLLOWERS
+    case FOLLOWING
+}
+
 struct COLORS
 {
     static let APP_BACKGROUND = UIColor(red: 254/255.0, green: 254/255.0, blue: 254/255.0, alpha: 1.0)
@@ -33,6 +39,7 @@ struct GEN_STRINGS
     static let NO_URL = "No url"
     static let NO_SPC = "The search query cannot contain spaces. Try again!"
     static let NO_NET = "You appear to be offline. Try again!"
+    static let NO_FOLLOWERS = "The user does not have any follower"
 }
 
 struct TITLES
@@ -43,6 +50,8 @@ struct TITLES
 
 struct IDENTIFIERS
 {
+    static let FOLLOW_CELL_ID = "followCellId"
+    static let FOLLOW_LIST_VC_ID = "FollowListViewController"
     static let PROFILE_VIEW_CONTROLLER = "ProfileViewController"
     static let SEARCH_TABLE_HEAD = "searchTableHeader"
     static let HISTORY_CELL_ID = "historyTableViewCell"
@@ -63,6 +72,7 @@ struct URL_STRINGS
 
 struct FILE_NAMES
 {
+    static let FOLLOW_LIST_VC = "FollowListViewController"
     static let HISTORY_TABLE_CELL = "HistoryTableViewCell"
     static let SEARCH_TABLE_CELL = "UserSearchTableViewCell"
     static let TILE_COLLECTION_CELL = "TileCollectionViewCell"

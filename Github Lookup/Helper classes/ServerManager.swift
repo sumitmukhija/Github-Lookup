@@ -12,6 +12,34 @@ import Alamofire
 class ServerManager {
     
     
+    class func getUserFollowers(url: String, completion: @escaping (_ error: Error?, _ user: [User]?) -> Void){
+        Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil)
+            .responseJSON { response in
+                if response.response?.statusCode == 200
+                {
+                    if let data = response.result.value as? [[String: Any]]
+                    {
+                        var arr = Array<User>()
+                        for item in data{
+                            let user = User()
+                            user.login = (item["login"] as? String)
+                            user.avatarUrl = (item["avatar_url"] as? String) ?? GEN_STRINGS.NO_URL
+                            user.htmlUrl = (item["html_url"] as? String) ?? GEN_STRINGS.NO_URL
+                            arr.append(user)
+                        }
+                        completion(nil, arr)
+                    }
+                    else
+                    {
+                        completion(nil, [])
+                    }
+                }
+                else{
+                    //TODO: Handle error
+                }
+        }
+    }
+    
     class func getUserDetails(name: String, completion: @escaping (_ error: Error?, _ user: User?) -> Void)
     {
         let url = "\(URL_STRINGS.USER)\(name)"

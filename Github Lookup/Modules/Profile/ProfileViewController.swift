@@ -12,7 +12,7 @@ class ProfileViewController: BaseTabViewController, UICollectionViewDelegate, UI
     
     var user: User?
     var userImage: UIImage?
-
+    
     var stats: [[String: Int]]?
     var colors = [COLORS.MAT_CYAN, COLORS.MAT_TEAL, COLORS.MAT_AMBER,  COLORS.MAT_GREEN]
     
@@ -60,10 +60,10 @@ class ProfileViewController: BaseTabViewController, UICollectionViewDelegate, UI
     }
     
     @IBAction func viewFollowingAction(_ sender: AnyObject) {
-        
-        
+        navigateToFollowScreen(opMode: .FOLLOWING)
     }
     @IBAction func viewFollowersAction(_ sender: AnyObject) {
+        navigateToFollowScreen(opMode: .FOLLOWERS)
     }
     
     
@@ -78,12 +78,40 @@ class ProfileViewController: BaseTabViewController, UICollectionViewDelegate, UI
         }
     }
     
+    func navigateToFollowScreen(opMode: OPMODE)
+    {
+        if(opMode == .FOLLOWERS)
+        {
+            showHUD()
+            ServerManager.getUserFollowers(url: user!.followersUrl, completion: { (error, user) in
+                super.hideHUD()
+                let followListViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: IDENTIFIERS.FOLLOW_LIST_VC_ID) as! FollowListViewController
+                followListViewController.operationMode = opMode
+                if let _ = user
+                {
+                    followListViewController.dataSource = user
+                    self.navigationController?.pushViewController(followListViewController, animated: true)
+                }
+                else{
+                    Utility.showDisclaimerAlert(msg: GEN_STRINGS.NO_FOLLOWERS)
+                }
+            })
+        }
+        else
+        {
+            let followListViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: IDENTIFIERS.FOLLOW_LIST_VC_ID) as! FollowListViewController
+            followListViewController.operationMode = opMode
+            self.navigationController?.pushViewController(followListViewController, animated: true)
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IDENTIFIERS.TILE_COLLECTION_CELL, for: indexPath) as! TileCollectionViewCell
+        cell.wrapperView.layer.cornerRadius = 6.0
         cell.wrapperView.backgroundColor = colors[indexPath.row]
         if let dictionary = stats?[indexPath.row]
         {
