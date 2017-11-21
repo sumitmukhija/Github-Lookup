@@ -10,8 +10,6 @@ import UIKit
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate
 {
-
-    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableCell(withIdentifier: "cellHeader") as! SearchTableHeader
         return header
@@ -30,9 +28,11 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
             ServerManager.getUserDetails(name: query, completion: { (err, usr) in
                 if let _ = usr
                 {
+                    UserDefaultsHelper.addSearchCount()
                     self.dataArray.removeAll()
                     self.dataArray.append(usr!)
                     self.tableViewOutlet.reloadData()
+                    self.tileCollectionView.reloadData()
                 }
                 else
                 {

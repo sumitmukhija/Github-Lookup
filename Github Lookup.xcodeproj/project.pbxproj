@@ -33,6 +33,7 @@
 		95B4BC401FC2CE150045D732 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B4BC3F1FC2CE150045D732 /* BaseViewController.swift */; };
 		95B4BC421FC2CE9E0045D732 /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B4BC411FC2CE9E0045D732 /* BorderedButton.swift */; };
 		95E7CCF41FC3F9DD000FCDD6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E7CCF31FC3F9DD000FCDD6 /* User.swift */; };
+		95E7CCF61FC41920000FCDD6 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E7CCF51FC41920000FCDD6 /* UserDefaultsHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		95B4BC3F1FC2CE150045D732 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		95B4BC411FC2CE9E0045D732 /* BorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedButton.swift; sourceTree = "<group>"; };
 		95E7CCF31FC3F9DD000FCDD6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		95E7CCF51FC41920000FCDD6 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		D6C4D30AFE780D9CE2144E75 /* Pods_Github_Lookup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Github_Lookup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -203,6 +205,7 @@
 				9567FE391FC31BD800C39FD1 /* HistoryTableViewCell.swift */,
 				9567FE3F1FC32A5600C39FD1 /* CircularView.swift */,
 				9567FE411FC3323900C39FD1 /* UserSearchTableViewCell.swift */,
+				95E7CCF51FC41920000FCDD6 /* UserDefaultsHelper.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				95B4BC401FC2CE150045D732 /* BaseViewController.swift in Sources */,
 				9567FE241FC2E88000C39FD1 /* SearchViewController.swift in Sources */,
 				95B4BC191FC2C8660045D732 /* AppDelegate.swift in Sources */,
+				95E7CCF61FC41920000FCDD6 /* UserDefaultsHelper.swift in Sources */,
 				95B4BC421FC2CE9E0045D732 /* BorderedButton.swift in Sources */,
 				9567FE341FC2FAE900C39FD1 /* TileCollectionViewHandler.swift in Sources */,
 				95B4BC321FC2CA910045D732 /* LandingViewController.swift in Sources */,

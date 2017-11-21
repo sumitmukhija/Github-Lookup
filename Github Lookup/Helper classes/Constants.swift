@@ -41,6 +41,9 @@ struct IDENTIFIERS
     static let SEARCH_TABLE_HEAD = "searchTableHeader"
     static let SEARCH_TABLE_CELL = "searchTableCell"
     static let TILE_COLLECTION_CELL = "tileCollectionViewCell"
+    static let DEF_SEARCH_COUNT = "searchCount"
+    static let DEF_VIEW_COUNT = "viewCount"
+    static let DEF_SAVE_COUNT = "saveCount"
 }
 
 struct URL_STRINGS

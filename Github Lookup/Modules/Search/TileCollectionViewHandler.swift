@@ -21,7 +21,21 @@ extension SearchViewController
     @objc(collectionView:cellForItemAtIndexPath:) func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IDENTIFIERS.TILE_COLLECTION_CELL, for: indexPath) as! TileCollectionViewCell
         cell.wrapperView.backgroundColor = colors[indexPath.row]
-        cell.lblNumber.text = "0"
+        switch(indexPath.row)
+        {
+        case 0:
+            cell.lblNumber.text = "\(UserDefaultsHelper.getSearchCount())"
+            break
+        case 1:
+            cell.lblNumber.text = "\(UserDefaultsHelper.getSavedCount())"
+            break
+        case 2:
+            cell.lblNumber.text = "\(UserDefaultsHelper.getViewedCount())"
+            break
+        default:
+            cell.lblNumber.text = "0"
+        }
+        
         cell.lblText.text = tilesTitle[indexPath.row]
         return cell
     }
