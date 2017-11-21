@@ -136,17 +136,19 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search for a GitHub user" translatesAutoresizingMaskIntoConstraints="NO" id="4kE-FN-Nbz">
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="rUO-9w-wdd" id="5KI-nc-SWX"/>
-                                </connections>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ety-jL-EEo">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" placeholder="Search for a GitHub user" id="4kE-FN-Nbz">
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="rUO-9w-wdd" id="5KI-nc-SWX"/>
+                                    </connections>
+                                </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchTableHeader" rowHeight="40" id="dMp-V5-27t" customClass="SearchTableHeader" customModule="Github_Lookup" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="40"/>
+                                        <rect key="frame" x="0.0" y="72" width="343" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" tableViewCell="dMp-V5-27t" id="JmX-S9-woe">
                                             <frame key="frameInset" width="343" height="39"/>
@@ -174,14 +176,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Ety-jL-EEo" firstAttribute="top" secondItem="C5N-jX-7tI" secondAttribute="bottom" constant="12" id="5BM-jN-mJP"/>
                             <constraint firstItem="Yo6-u2-YM4" firstAttribute="top" secondItem="Ety-jL-EEo" secondAttribute="bottom" constant="8" id="645-Oz-wf6"/>
-                            <constraint firstItem="4kE-FN-Nbz" firstAttribute="centerX" secondItem="C5N-jX-7tI" secondAttribute="centerX" id="8ny-1x-aOq"/>
-                            <constraint firstItem="Ety-jL-EEo" firstAttribute="top" secondItem="4kE-FN-Nbz" secondAttribute="bottom" id="B7W-xo-kjW"/>
                             <constraint firstItem="C5N-jX-7tI" firstAttribute="top" secondItem="SdV-F9-gG5" secondAttribute="bottom" constant="8" id="Ggy-ad-oqb"/>
-                            <constraint firstItem="4kE-FN-Nbz" firstAttribute="width" secondItem="C5N-jX-7tI" secondAttribute="width" id="YCw-Ps-nnv"/>
                             <constraint firstItem="C5N-jX-7tI" firstAttribute="height" secondItem="F5N-kA-qZ2" secondAttribute="height" multiplier="1:6" id="YuX-4H-DyM"/>
                             <constraint firstItem="C5N-jX-7tI" firstAttribute="leading" secondItem="F5N-kA-qZ2" secondAttribute="leading" constant="16" id="hhV-Eh-GhU"/>
-                            <constraint firstItem="4kE-FN-Nbz" firstAttribute="top" secondItem="C5N-jX-7tI" secondAttribute="bottom" id="lcN-yF-33w"/>
                             <constraint firstItem="Ety-jL-EEo" firstAttribute="leading" secondItem="F5N-kA-qZ2" secondAttribute="leadingMargin" id="ll1-vo-UW6"/>
                             <constraint firstItem="Ety-jL-EEo" firstAttribute="trailing" secondItem="F5N-kA-qZ2" secondAttribute="trailingMargin" id="qXm-Ib-MAE"/>
                             <constraint firstAttribute="trailing" secondItem="C5N-jX-7tI" secondAttribute="trailing" constant="16" id="ulr-JK-o3r"/>
@@ -207,7 +206,6 @@
                 <searchDisplayController id="CsV-7w-oCt">
                     <connections>
                         <outlet property="delegate" destination="rUO-9w-wdd" id="iiR-du-qAL"/>
-                        <outlet property="searchBar" destination="4kE-FN-Nbz" id="JOR-2V-wQO"/>
                         <outlet property="searchContentsController" destination="rUO-9w-wdd" id="Be6-0O-8eh"/>
                         <outlet property="searchResultsDataSource" destination="rUO-9w-wdd" id="xZq-ro-rhf"/>
                         <outlet property="searchResultsDelegate" destination="rUO-9w-wdd" id="TSQ-o1-SM8"/>

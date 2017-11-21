@@ -18,10 +18,17 @@ struct COLORS
     static let MAT_AMBER = UIColor(red: 255/255.0, green: 193/255.0, blue: 7/255.0, alpha: 1.0)
 }
 
+
 struct GEN_STRINGS
 {
     static let VIEWED = "Viewed"
     static let SAVED = "Saved"
+    static let NO_BIO = "No bio"
+    static let NO_MAIL = "No email"
+    static let NO_COMP = "No company"
+    static let NO_LOC = "No location"
+    static let NO_NAME = "Unknown"
+    static let NO_URL = "No url"
 }
 
 struct TITLES
@@ -32,10 +39,17 @@ struct TITLES
 struct IDENTIFIERS
 {
     static let SEARCH_TABLE_HEAD = "searchTableHeader"
+    static let SEARCH_TABLE_CELL = "searchTableCell"
     static let TILE_COLLECTION_CELL = "tileCollectionViewCell"
+}
+
+struct URL_STRINGS
+{
+    static let USER = "https://api.github.com/users/"
 }
 
 struct FILE_NAMES
 {
+    static let SEARCH_TABLE_CELL = "UserSearchTableViewCell"
     static let TILE_COLLECTION_CELL = "TileCollectionViewCell"
 }

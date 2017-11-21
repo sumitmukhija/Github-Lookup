@@ -11,6 +11,7 @@ import UIKit
 class UserSearchTableViewCell: UITableViewCell {
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblOrganization: UILabel!
+    @IBOutlet weak var imgAvatar: UIImageView!
     @IBOutlet weak var lblEmail: UILabel!
     @IBOutlet weak var lblNumberOfRepos: UILabel!
     @IBOutlet weak var lblNumberOfFollowing: UILabel!
@@ -19,4 +20,9 @@ class UserSearchTableViewCell: UITableViewCell {
     @IBOutlet weak var lblNumberOfFollowers: UILabel!
     @IBOutlet weak var lblGitUsername: UILabel!
     @IBOutlet weak var lblCity: UILabel!
+    
+    override func awakeFromNib() {
+        self.imgAvatar.layer.masksToBounds = true
+        self.imgAvatar.layer.cornerRadius = 30.0
+    }
 }

@@ -32,6 +32,7 @@
 		95B4BC3D1FC2CB510045D732 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B4BC3C1FC2CB510045D732 /* Constants.swift */; };
 		95B4BC401FC2CE150045D732 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B4BC3F1FC2CE150045D732 /* BaseViewController.swift */; };
 		95B4BC421FC2CE9E0045D732 /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B4BC411FC2CE9E0045D732 /* BorderedButton.swift */; };
+		95E7CCF41FC3F9DD000FCDD6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E7CCF31FC3F9DD000FCDD6 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		95B4BC3C1FC2CB510045D732 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		95B4BC3F1FC2CE150045D732 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		95B4BC411FC2CE9E0045D732 /* BorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedButton.swift; sourceTree = "<group>"; };
+		95E7CCF31FC3F9DD000FCDD6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D6C4D30AFE780D9CE2144E75 /* Pods_Github_Lookup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Github_Lookup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -221,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				95B4BC391FC2CB160045D732 /* Github_Lookup.xcdatamodeld */,
+				95E7CCF31FC3F9DD000FCDD6 /* User.swift */,
 			);
 			path = "Data models";
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				95B4BC321FC2CA910045D732 /* LandingViewController.swift in Sources */,
 				9567FE2E1FC2F33500C39FD1 /* TileCollectionViewCell.swift in Sources */,
 				9567FE2A1FC2F0C300C39FD1 /* HistoryViewController.swift in Sources */,
+				95E7CCF41FC3F9DD000FCDD6 /* User.swift in Sources */,
 				9567FE421FC3323900C39FD1 /* UserSearchTableViewCell.swift in Sources */,
 				95B4BC3B1FC2CB170045D732 /* Github_Lookup.xcdatamodeld in Sources */,
 				95B4BC3D1FC2CB510045D732 /* Constants.swift in Sources */,
@@ -522,6 +526,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6YJ42MYCSX;
 				INFOPLIST_FILE = "Github Lookup/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "in.sumitmukhija.Github-Lookup";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -536,6 +541,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6YJ42MYCSX;
 				INFOPLIST_FILE = "Github Lookup/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "in.sumitmukhija.Github-Lookup";
 				PRODUCT_NAME = "$(TARGET_NAME)";

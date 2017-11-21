@@ -17,6 +17,7 @@ class SearchViewController: BaseTabViewController, UICollectionViewDelegate, UIC
     
     var isSearchActive: Bool? = false
     var searchFilteredArray: [String] = []
+    var dataArray: Array<User> = []
     let tilesTitle = [TITLES.SEARCH, GEN_STRINGS.SAVED, GEN_STRINGS.VIEWED]
     let colors = [COLORS.MAT_CYAN, COLORS.MAT_TEAL, COLORS.MAT_AMBER]
     
@@ -34,10 +35,14 @@ class SearchViewController: BaseTabViewController, UICollectionViewDelegate, UIC
     
     func initializeSearchTableView()
     {
+        let nib = UINib(nibName: FILE_NAMES.SEARCH_TABLE_CELL, bundle: nil)
+        tableViewOutlet.register(nib, forCellReuseIdentifier: IDENTIFIERS.SEARCH_TABLE_CELL)
+        tableViewOutlet.showsVerticalScrollIndicator = false
         tableViewOutlet.separatorStyle = .none
         tableViewOutlet.delegate = self
         tableViewOutlet.dataSource = self
         searchBarOutlet.delegate = self
+        searchBarOutlet.returnKeyType = .search
     }
     
     func initializeTileCollectionView()
