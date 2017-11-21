@@ -56,6 +56,15 @@ class FollowListViewController: BaseTabViewController, UITableViewDelegate, UITa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let activeUser = dataSource?[indexPath.row]
+        if let url = activeUser?.htmlUrl
+        {
+            UIApplication.shared.openURL(URL(string: url)!)
+        }
+        else
+        {
+            Utility.showErrorAlert(msg: GEN_STRINGS.CANT_VISIT)
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
