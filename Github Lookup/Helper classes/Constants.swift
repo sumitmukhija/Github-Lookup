@@ -16,12 +16,14 @@ struct COLORS
     static let MAT_CYAN = UIColor(red: 0/255.0, green: 188/255.0, blue: 212/255.0, alpha: 1.0)
     static let MAT_TEAL = UIColor(red: 0/255.0, green: 150/255.0, blue: 136/255.0, alpha: 1.0)
     static let MAT_AMBER = UIColor(red: 255/255.0, green: 193/255.0, blue: 7/255.0, alpha: 1.0)
+    static let MAT_GREEN = UIColor(red: 0/255.0, green: 230/255.0, blue: 118/255.0, alpha: 1.0)
 }
 
 
 struct GEN_STRINGS
 {
     static let VIEWED = "Viewed"
+    static let CANT_VISIT = "The url appears to be broken or missing. Cannot visit!"
     static let SAVED = "Saved"
     static let NO_BIO = "No bio"
     static let NO_MAIL = "No email"
@@ -41,6 +43,7 @@ struct TITLES
 
 struct IDENTIFIERS
 {
+    static let PROFILE_VIEW_CONTROLLER = "ProfileViewController"
     static let SEARCH_TABLE_HEAD = "searchTableHeader"
     static let HISTORY_CELL_ID = "historyTableViewCell"
     static let SEARCH_TABLE_CELL = "searchTableCell"

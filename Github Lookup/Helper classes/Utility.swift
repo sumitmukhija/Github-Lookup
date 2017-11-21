@@ -18,7 +18,7 @@ class Utility {
         alert.show()
     }
     
-    class func showErrorMessage(msg: String)
+    class func showErrorAlert(msg: String)
     {
         let alert = UIAlertView(title: "Err", message: msg, delegate: nil, cancelButtonTitle: "Okay")
         alert.show()

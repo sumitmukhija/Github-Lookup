@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3BB1EBBCE6DE1EB7875913B7 /* Pods_Github_Lookup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C4D30AFE780D9CE2144E75 /* Pods_Github_Lookup.framework */; };
+		9546D3461FC44F75001788AC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9546D3451FC44F75001788AC /* ProfileViewController.swift */; };
 		9567FE241FC2E88000C39FD1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9567FE231FC2E88000C39FD1 /* SearchViewController.swift */; };
 		9567FE281FC2F08C00C39FD1 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9567FE271FC2F08C00C39FD1 /* BookmarksViewController.swift */; };
 		9567FE2A1FC2F0C300C39FD1 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9567FE291FC2F0C300C39FD1 /* HistoryViewController.swift */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		2BCC4543882846D30714F62F /* Pods-Github Lookup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github Lookup.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Github Lookup/Pods-Github Lookup.debug.xcconfig"; sourceTree = "<group>"; };
 		824CBEDA69D78309B0668B67 /* Pods-Github Lookup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github Lookup.release.xcconfig"; path = "Pods/Target Support Files/Pods-Github Lookup/Pods-Github Lookup.release.xcconfig"; sourceTree = "<group>"; };
+		9546D3451FC44F75001788AC /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9567FE231FC2E88000C39FD1 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		9567FE271FC2F08C00C39FD1 /* BookmarksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		9567FE291FC2F0C300C39FD1 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9546D3441FC44F69001788AC /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				9546D3451FC44F75001788AC /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		9567FE221FC2E87000C39FD1 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +156,7 @@
 		95B4BC2D1FC2CA280045D732 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				9546D3441FC44F69001788AC /* Profile */,
 				95B4BC301FC2CA910045D732 /* Landing */,
 				9567FE221FC2E87000C39FD1 /* Search */,
 				9567FE261FC2F06300C39FD1 /* Bookmarks */,
@@ -405,6 +416,7 @@
 				9567FE2A1FC2F0C300C39FD1 /* HistoryViewController.swift in Sources */,
 				95E7CCF41FC3F9DD000FCDD6 /* User.swift in Sources */,
 				9567FE421FC3323900C39FD1 /* UserSearchTableViewCell.swift in Sources */,
+				9546D3461FC44F75001788AC /* ProfileViewController.swift in Sources */,
 				95B4BC3B1FC2CB170045D732 /* Github_Lookup.xcdatamodeld in Sources */,
 				95B4BC3D1FC2CB510045D732 /* Constants.swift in Sources */,
 			);

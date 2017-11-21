@@ -22,7 +22,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ffa-Gv-JtW">
@@ -126,7 +126,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Yo6-u2-YM4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="F5N-kA-qZ2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="C5N-jX-7tI">
@@ -142,7 +142,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ety-jL-EEo">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" placeholder="Search for a GitHub user" id="4kE-FN-Nbz">
-                                    <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="288" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="twitter" keyboardAppearance="alert"/>
                                     <connections>
@@ -151,10 +151,10 @@
                                 </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchTableHeader" rowHeight="40" id="dMp-V5-27t" customClass="SearchTableHeader" customModule="Github_Lookup" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="72" width="343" height="40"/>
+                                        <rect key="frame" x="0.0" y="72" width="288" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" tableViewCell="dMp-V5-27t" id="JmX-S9-woe">
-                                            <frame key="frameInset" width="343" height="39"/>
+                                            <frame key="frameInset" width="288" height="39"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOCALLY SAVED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfJ-Eb-M8U">
@@ -217,6 +217,173 @@
             </objects>
             <point key="canvasLocation" x="3362.4000000000001" y="-100.29985007496252"/>
         </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="miw-fv-5P1">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eqU-1r-0jF" customClass="ProfileViewController" customModule="Github_Lookup" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qgY-mG-vXJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Go4-0f-RhR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="paz-sd-fs2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G3N-vC-fl5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bio" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xnn-bq-i0Q">
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KhN-iD-bLn" customClass="BorderedButton" customModule="Github_Lookup" customModuleProvider="target">
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <state key="normal" title="Followers"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="width">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="viewFollowersAction:" destination="eqU-1r-0jF" eventType="touchUpInside" id="rq2-YF-7Us"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J1p-av-U3U" customClass="BorderedButton" customModule="Github_Lookup" customModuleProvider="target">
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Following">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="14" name="Avenir-Book"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="width">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="viewFollowingAction:" destination="eqU-1r-0jF" eventType="touchUpInside" id="Kzf-Px-tay"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KiJ-EW-jix">
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="9"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAA-kA-Ee9">
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="9"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dZJ-f7-ZfR">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PTH-AM-I3g">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="MKB-sw-I6J">
+                                        <rect key="frame" x="0.0" y="23" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wCn-cj-ezf" customClass="BorderedButton" customModule="Github_Lookup" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.50588235290000005" green="0.78039215689999997" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="wdT-uT-5vT"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="VISIT">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="14" name="Avenir-Book"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="0.50588235290000005" green="0.78039215689999997" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="width">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="visitAction:" destination="eqU-1r-0jF" eventType="touchUpInside" id="1W3-Eb-LJ1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KiJ-EW-jix" firstAttribute="leading" secondItem="KhN-iD-bLn" secondAttribute="leading" id="2MR-vs-wnu"/>
+                            <constraint firstItem="vAA-kA-Ee9" firstAttribute="trailing" secondItem="J1p-av-U3U" secondAttribute="trailing" id="2Um-Hb-dM7"/>
+                            <constraint firstItem="wCn-cj-ezf" firstAttribute="centerX" secondItem="paz-sd-fs2" secondAttribute="centerX" id="3kK-Pq-oHv"/>
+                            <constraint firstItem="dZJ-f7-ZfR" firstAttribute="leading" secondItem="paz-sd-fs2" secondAttribute="leadingMargin" id="4Yx-Bm-cEX"/>
+                            <constraint firstItem="G3N-vC-fl5" firstAttribute="centerX" secondItem="paz-sd-fs2" secondAttribute="centerX" id="5ii-FI-0ct"/>
+                            <constraint firstItem="G3N-vC-fl5" firstAttribute="width" secondItem="paz-sd-fs2" secondAttribute="width" id="ARF-r9-Zlf"/>
+                            <constraint firstItem="KiJ-EW-jix" firstAttribute="top" secondItem="KhN-iD-bLn" secondAttribute="bottom" constant="16" id="DJQ-ZA-2A3"/>
+                            <constraint firstItem="KhN-iD-bLn" firstAttribute="leading" secondItem="xnn-bq-i0Q" secondAttribute="leading" id="FKe-0D-rhs"/>
+                            <constraint firstItem="vAA-kA-Ee9" firstAttribute="centerY" secondItem="KiJ-EW-jix" secondAttribute="centerY" id="G6T-jF-IcC"/>
+                            <constraint firstItem="J1p-av-U3U" firstAttribute="centerY" secondItem="KhN-iD-bLn" secondAttribute="centerY" id="GyE-Ao-r9E"/>
+                            <constraint firstItem="KhN-iD-bLn" firstAttribute="width" secondItem="xnn-bq-i0Q" secondAttribute="width" multiplier="1:2" id="Gzv-gm-WaE"/>
+                            <constraint firstItem="KhN-iD-bLn" firstAttribute="height" secondItem="paz-sd-fs2" secondAttribute="height" multiplier="1:15" id="HBw-nu-ynY"/>
+                            <constraint firstItem="dZJ-f7-ZfR" firstAttribute="height" secondItem="paz-sd-fs2" secondAttribute="height" multiplier="1:5" id="HFc-8v-Gws"/>
+                            <constraint firstItem="J1p-av-U3U" firstAttribute="height" secondItem="KhN-iD-bLn" secondAttribute="height" id="KZ9-ze-dvV"/>
+                            <constraint firstItem="KhN-iD-bLn" firstAttribute="top" secondItem="xnn-bq-i0Q" secondAttribute="bottom" constant="24" id="M7r-Gd-lp7"/>
+                            <constraint firstItem="J1p-av-U3U" firstAttribute="leading" secondItem="KhN-iD-bLn" secondAttribute="trailing" constant="4" id="MoK-Ye-bj2"/>
+                            <constraint firstItem="vAA-kA-Ee9" firstAttribute="leading" secondItem="J1p-av-U3U" secondAttribute="leading" id="NQQ-2a-yM3"/>
+                            <constraint firstItem="wCn-cj-ezf" firstAttribute="width" secondItem="paz-sd-fs2" secondAttribute="width" id="Tky-hU-msY"/>
+                            <constraint firstItem="KiJ-EW-jix" firstAttribute="trailing" secondItem="KhN-iD-bLn" secondAttribute="trailing" id="bNv-GQ-zmW"/>
+                            <constraint firstItem="G3N-vC-fl5" firstAttribute="top" secondItem="qgY-mG-vXJ" secondAttribute="bottom" constant="3" id="btX-Yv-bdB"/>
+                            <constraint firstItem="xnn-bq-i0Q" firstAttribute="width" secondItem="G3N-vC-fl5" secondAttribute="width" multiplier="1:1.2" id="cLU-mM-eR6"/>
+                            <constraint firstItem="dZJ-f7-ZfR" firstAttribute="top" secondItem="KiJ-EW-jix" secondAttribute="bottom" constant="24" id="cup-7m-rxr"/>
+                            <constraint firstItem="Go4-0f-RhR" firstAttribute="top" secondItem="wCn-cj-ezf" secondAttribute="bottom" id="d5h-Jl-wbZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dZJ-f7-ZfR" secondAttribute="trailing" id="e2m-Yg-aER"/>
+                            <constraint firstItem="xnn-bq-i0Q" firstAttribute="top" secondItem="G3N-vC-fl5" secondAttribute="bottom" constant="8" id="haq-Ix-ta1"/>
+                            <constraint firstItem="J1p-av-U3U" firstAttribute="trailing" secondItem="xnn-bq-i0Q" secondAttribute="trailing" id="n7S-dQ-I1S"/>
+                            <constraint firstItem="G3N-vC-fl5" firstAttribute="height" secondItem="paz-sd-fs2" secondAttribute="height" multiplier="1:4" id="ocJ-4a-UfH"/>
+                            <constraint firstItem="xnn-bq-i0Q" firstAttribute="centerX" secondItem="G3N-vC-fl5" secondAttribute="centerX" id="zdV-Ay-oYS"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="imgProfile" destination="G3N-vC-fl5" id="Vn9-NU-8fP"/>
+                        <outlet property="lblBio" destination="xnn-bq-i0Q" id="Fxv-0g-ovI"/>
+                        <outlet property="lblCity" destination="vAA-kA-Ee9" id="S6w-yB-0Do"/>
+                        <outlet property="lblWorkplace" destination="KiJ-EW-jix" id="wLw-04-3Z1"/>
+                        <outlet property="statsCollectionView" destination="dZJ-f7-ZfR" id="qm0-Fd-0nV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n5c-QV-wa1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4074.375" y="-22.5"/>
+        </scene>
         <!--Bookmarks View Controller-->
         <scene sceneID="0RH-xu-eo3">
             <objects>
@@ -226,7 +393,7 @@
                         <viewControllerLayoutGuide type="bottom" id="2Mw-cK-Tdb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="e66-Qh-cRI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -245,7 +412,7 @@
                         <viewControllerLayoutGuide type="bottom" id="1wZ-DR-UYo"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="whS-Pv-eAi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="39K-Tr-Rup">

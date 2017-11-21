@@ -29,12 +29,12 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
         {
             if query.contains(" ")
             {
-                Utility.showErrorMessage(msg: GEN_STRINGS.NO_SPC)
+                Utility.showErrorAlert(msg: GEN_STRINGS.NO_SPC)
                 return
             }
             if(!Utility.isInternetAvailable())
             {
-                Utility.showErrorMessage(msg: GEN_STRINGS.NO_NET)
+                Utility.showErrorAlert(msg: GEN_STRINGS.NO_NET)
                 return
             }
             super.showHUD()
@@ -80,6 +80,8 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
         let activeUser = dataArray[indexPath.row]
+        let cell = tableView.cellForRow(at: indexPath) as! UserSearchTableViewCell
+        let currentUserImage = cell.imgAvatar.image
         let actionSheet = UIAlertController(title: "Select an action", message: "What would you like to do with \(activeUser.login!)'s profile", preferredStyle: .actionSheet)
         
         let bookmarkAction = UIAlertAction(title: "Bookmark", style: .default) { (action) in
@@ -87,7 +89,13 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
         }
         
         let viewAction = UIAlertAction(title: "View", style: .default) { (action) in
-            
+            let profileViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: IDENTIFIERS.PROFILE_VIEW_CONTROLLER) as! ProfileViewController
+            profileViewController.user = activeUser
+            if let _ = currentUserImage
+            {
+                profileViewController.userImage = currentUserImage!
+            }
+            self.navigationController?.pushViewController(profileViewController, animated: true)
         }
         
         let shareAction = UIAlertAction(title: "Share", style: .default) { (action) in
