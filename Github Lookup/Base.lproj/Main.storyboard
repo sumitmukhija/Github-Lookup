@@ -82,6 +82,9 @@
                                                 <real key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="aboutBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u8u-Fi-gPY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
@@ -272,7 +275,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tra-6N-cg1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="tab_img_search" id="3XH-m9-Zh3"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jfi-H9-J8g">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Jfi-H9-J8g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -311,7 +314,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vkm-NJ-2qd" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="tab_img_bookmarks" id="LYh-Jg-v6w"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FFf-ZN-eak">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="FFf-ZN-eak">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -330,7 +333,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cwb-Kx-t7x" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="tab_img_history" id="JQV-Et-tqK"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qDY-Nd-xAp">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="qDY-Nd-xAp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

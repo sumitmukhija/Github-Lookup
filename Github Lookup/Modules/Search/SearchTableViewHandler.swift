@@ -15,27 +15,42 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
         return header
     }
     
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let query = searchBar.text
         {
+            if query.contains(" ")
+            {
+                Utility.showErrorMessage(msg: GEN_STRINGS.NO_SPC)
+                return
+            }
+            if(!Utility.isInternetAvailable())
+            {
+                Utility.showErrorMessage(msg: GEN_STRINGS.NO_NET)
+                return
+            }
             super.showHUD()
             ServerManager.getUserDetails(name: query, completion: { (err, usr) in
                 super.hideHUD()
                 if let _ = usr
                 {
-                    UserDefaultsHelper.addSearchCount()
-                    CoreDataHelper.saveHistory(query: usr!.login!)
                     self.dataArray.removeAll()
-                    self.dataArray.append(usr!)
-                    self.tableViewOutlet.reloadData()
-                    self.tileCollectionView.reloadData()
+                    if let _ = usr?.login
+                    {
+                        UserDefaultsHelper.addSearchCount()
+                        CoreDataHelper.saveHistory(query: usr!.login!)
+                        self.dataArray.append(usr!)
+                        self.tableViewOutlet.reloadData()
+                        self.tileCollectionView.reloadData()
+                    }
                 }
                 else
                 {

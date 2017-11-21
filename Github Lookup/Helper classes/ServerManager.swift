@@ -15,7 +15,6 @@ class ServerManager {
     class func getUserDetails(name: String, completion: @escaping (_ error: Error?, _ user: User?) -> Void)
     {
         let url = "\(URL_STRINGS.USER)\(name)"
-        
         Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil)
             .responseJSON { response in
                 if let data = response.result.value as? [String:Any]

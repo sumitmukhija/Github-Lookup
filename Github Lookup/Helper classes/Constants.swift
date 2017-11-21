@@ -29,6 +29,8 @@ struct GEN_STRINGS
     static let NO_LOC = "No location"
     static let NO_NAME = "Unknown"
     static let NO_URL = "No url"
+    static let NO_SPC = "The search query cannot contain spaces. Try again!"
+    static let NO_NET = "You appear to be offline. Try again!"
 }
 
 struct TITLES
