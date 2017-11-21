@@ -77,7 +77,7 @@ class BaseTabViewController: UIViewController {
     {
         if let _ = hud
         {
-            hud!.textLabel.text = "git pull content.."
+            hud!.textLabel.text = "Fetching content from GitHub"
             hud!.show(in: self.view)
         }
     }

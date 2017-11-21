@@ -21,6 +21,8 @@ class FollowListCell: UITableViewCell
 
 class FollowListViewController: BaseTabViewController, UITableViewDelegate, UITableViewDataSource {
     
+    let imageCache = NSCache<NSString, UIImage>()
+
     @IBOutlet weak var followTableView: UITableView!
     
     var dataSource: Array<User>?
@@ -40,12 +42,24 @@ class FollowListViewController: BaseTabViewController, UITableViewDelegate, UITa
         let cell = tableView.dequeueReusableCell(withIdentifier: IDENTIFIERS.FOLLOW_CELL_ID) as! FollowListCell
         let activeUser = dataSource?[indexPath.row]
         cell.lblName.text = activeUser?.login!
-        if activeUser?.avatarUrl != GEN_STRINGS.NO_URL
+        
+        if let cachedImage = imageCache.object(forKey: NSString(string: (activeUser?.login!)!)) {
+            cell.imgFollow.image = cachedImage
+        }
+        else
         {
-            let url = URL(string:(activeUser?.avatarUrl)!)
-            let data = try? Data(contentsOf: url!)
-            let image: UIImage = UIImage(data: data!)!
-            cell.imgFollow.image = image
+            if activeUser?.avatarUrl != GEN_STRINGS.NO_URL
+            {
+                DispatchQueue.global(qos: .background).async {
+                    let url = URL(string:(activeUser?.avatarUrl)!)
+                    let data = try? Data(contentsOf: url!)
+                    let image: UIImage = UIImage(data: data!)!
+                    DispatchQueue.main.async {
+                        self.imageCache.setObject(image, forKey: NSString(string: (activeUser?.login!)!))
+                        cell.imgFollow.image = image
+                    }
+                }
+            }
         }
         return cell
     }
