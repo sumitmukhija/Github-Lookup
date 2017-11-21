@@ -31,6 +31,7 @@ struct TITLES
 
 struct IDENTIFIERS
 {
+    static let SEARCH_TABLE_HEAD = "searchTableHeader"
     static let TILE_COLLECTION_CELL = "tileCollectionViewCell"
 }
 

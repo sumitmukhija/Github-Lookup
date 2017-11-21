@@ -1,0 +1,15 @@
+PODS:
+  - Alamofire (4.5.0)
+  - UICountingLabel (1.4.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0)
+  - UICountingLabel
+
+SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  UICountingLabel: ed5ce5b6d5ef278ff40d99cfa49577a30ab0c87b
+
+PODFILE CHECKSUM: 98554e8d3fec7a74fa12b222ebc63740312d0968
+
+COCOAPODS: 1.1.1

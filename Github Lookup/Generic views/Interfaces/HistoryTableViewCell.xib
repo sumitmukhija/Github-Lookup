@@ -13,7 +13,7 @@
             <rect key="frame" x="0.0" y="0.0" width="673" height="62"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qje-aw-Ppy" id="Pjt-Yx-8C3">
-                <frame key="frameInset" width="673" height="61.5"/>
+                <frame key="frameInset" width="673" height="61"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_redo_history" translatesAutoresizingMaskIntoConstraints="NO" id="Zel-vY-FMR">
@@ -27,7 +27,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Organization" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9o-KM-l2j">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9o-KM-l2j">
                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -45,8 +45,8 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="lblDate" destination="d9o-KM-l2j" id="MLT-ze-3c6"/>
                 <outlet property="lblName" destination="nMy-Jc-QBg" id="N9y-ip-DDD"/>
-                <outlet property="lblOrganization" destination="d9o-KM-l2j" id="ulT-sQ-ANW"/>
             </connections>
             <point key="canvasLocation" x="-46.5" y="-50"/>
         </tableViewCell>

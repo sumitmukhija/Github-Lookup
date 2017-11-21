@@ -27,6 +27,15 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
         isSearchActive = false
     }
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = tableView.dequeueReusableCell(withIdentifier: "cellHeader") as! SearchTableHeader
+        return header
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
 //        searchFilteredArray = data.filter({ (text) -> Bool in
 //            let tmp: NSString = text
@@ -52,6 +61,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
         }
         return 0
     }
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         

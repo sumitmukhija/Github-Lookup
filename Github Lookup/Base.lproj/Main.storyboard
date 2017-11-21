@@ -7,6 +7,11 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="digital-7.ttf">
+            <string>Digital-7</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Landing View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -137,8 +142,34 @@
                                     <outlet property="delegate" destination="rUO-9w-wdd" id="5KI-nc-SWX"/>
                                 </connections>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ety-jL-EEo">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ety-jL-EEo">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchTableHeader" rowHeight="40" id="dMp-V5-27t" customClass="SearchTableHeader" customModule="Github_Lookup" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="40"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" tableViewCell="dMp-V5-27t" id="JmX-S9-woe">
+                                            <frame key="frameInset" width="343" height="39"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOCALLY SAVED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfJ-Eb-M8U">
+                                                    <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="cfJ-Eb-M8U" firstAttribute="width" secondItem="JmX-S9-woe" secondAttribute="width" id="Jzs-Ho-GtV"/>
+                                                <constraint firstItem="cfJ-Eb-M8U" firstAttribute="centerX" secondItem="JmX-S9-woe" secondAttribute="centerX" id="LeF-QI-28W"/>
+                                                <constraint firstItem="cfJ-Eb-M8U" firstAttribute="height" secondItem="JmX-S9-woe" secondAttribute="height" id="gqZ-3G-51I"/>
+                                                <constraint firstItem="cfJ-Eb-M8U" firstAttribute="centerY" secondItem="JmX-S9-woe" secondAttribute="centerY" id="xfQ-a8-GvJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblTitle" destination="cfJ-Eb-M8U" id="7Lq-oD-BD1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -229,7 +260,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tra-6N-cg1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="tab_img_search" id="3XH-m9-Zh3"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jfi-H9-J8g">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Jfi-H9-J8g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -248,6 +279,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ptm-x0-sJD" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Rmw-UH-hjG">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -267,7 +299,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vkm-NJ-2qd" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="tab_img_bookmarks" id="LYh-Jg-v6w"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FFf-ZN-eak">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="FFf-ZN-eak">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -286,7 +318,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cwb-Kx-t7x" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="tab_img_history" id="JQV-Et-tqK"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qDY-Nd-xAp">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="qDY-Nd-xAp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
