@@ -26,6 +26,7 @@ class HistoryViewController: BaseTabViewController, UITableViewDelegate, UITable
         historyTableView.register(nib, forCellReuseIdentifier: IDENTIFIERS.HISTORY_CELL_ID)
         historyTableView.delegate = self
         historyTableView.separatorStyle = .none
+        historyTableView.showsVerticalScrollIndicator = false
         historyTableView.dataSource = self
     }
     
