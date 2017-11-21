@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 class BaseTabViewController: UIViewController {
+    
+    let hud = JGProgressHUD(style: .dark)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = COLORS.APP_BACKGROUND
@@ -61,6 +65,23 @@ class BaseTabViewController: UIViewController {
         backButton.addTarget(self, action: #selector(backBtnPressed(sender:)), for: .touchUpInside)
         backButton.clipsToBounds = true
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
+    }
+    
+    func showHUD()
+    {
+        if let _ = hud
+        {
+            hud!.textLabel.text = "git pull content.."
+            hud!.show(in: self.view)
+        }
+    }
+    
+    func hideHUD()
+    {
+        if let _ = hud
+        {
+            hud!.dismiss(afterDelay: 1.0)
+        }
     }
     
     @objc func backBtnPressed(sender: AnyObject)

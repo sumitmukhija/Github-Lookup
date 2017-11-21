@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '4C8CB91D30159F9E1B15E787A4599F73'
-               BlueprintName = 'UICountingLabel'
+               BlueprintIdentifier = '24F73826C21CBCBE186224114BD582A1'
+               BlueprintName = 'JGProgressHUD'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'UICountingLabel.framework'>
+               BuildableName = 'JGProgressHUD.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

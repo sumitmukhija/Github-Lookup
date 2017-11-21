@@ -6,7 +6,7 @@ target 'Github Lookup' do
   use_frameworks!
   pod 'UICountingLabel'
   pod 'Alamofire', '~> 4.0'
-
+  pod 'JGProgressHUD'
   # Pods for Github Lookup
 
 end

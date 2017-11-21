@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>JGProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Github Lookup.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>864A7998C935ADF9D8C09C5B30AADD90</key>
+		<key>24F73826C21CBCBE186224114BD582A1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3C55EF5C727D992A4830C6F9C6CE94DE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4C8CB91D30159F9E1B15E787A4599F73</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9954BDDA9D83DAF21C4572A485208032</key>
 		<dict>
 			<key>primary</key>
 			<true/>

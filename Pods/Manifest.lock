@@ -1,15 +1,18 @@
 PODS:
   - Alamofire (4.5.0)
+  - JGProgressHUD (1.4)
   - UICountingLabel (1.4.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
+  - JGProgressHUD
   - UICountingLabel
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  JGProgressHUD: 1617b0940cf80bb53e8f7d6f0fd69252ea45d6d4
   UICountingLabel: ed5ce5b6d5ef278ff40d99cfa49577a30ab0c87b
 
-PODFILE CHECKSUM: 98554e8d3fec7a74fa12b222ebc63740312d0968
+PODFILE CHECKSUM: 22a82862b824354b2ad0fb654b0c3664142e8c4d
 
 COCOAPODS: 1.1.1

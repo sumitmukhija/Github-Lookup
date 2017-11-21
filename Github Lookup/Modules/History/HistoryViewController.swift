@@ -47,6 +47,7 @@ class HistoryViewController: BaseTabViewController, UITableViewDelegate, UITable
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        self.tabBarController?.selectedIndex = 0
     }
     
 }

@@ -34,6 +34,7 @@
 		95B4BC421FC2CE9E0045D732 /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B4BC411FC2CE9E0045D732 /* BorderedButton.swift */; };
 		95E7CCF41FC3F9DD000FCDD6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E7CCF31FC3F9DD000FCDD6 /* User.swift */; };
 		95E7CCF61FC41920000FCDD6 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E7CCF51FC41920000FCDD6 /* UserDefaultsHelper.swift */; };
+		95E7CCF81FC43656000FCDD6 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E7CCF71FC43656000FCDD6 /* Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		95B4BC411FC2CE9E0045D732 /* BorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedButton.swift; sourceTree = "<group>"; };
 		95E7CCF31FC3F9DD000FCDD6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		95E7CCF51FC41920000FCDD6 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
+		95E7CCF71FC43656000FCDD6 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		D6C4D30AFE780D9CE2144E75 /* Pods_Github_Lookup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Github_Lookup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -183,6 +185,7 @@
 				95B4BC3C1FC2CB510045D732 /* Constants.swift */,
 				95A121271FC3E127001DC9DD /* CoreDataHelper.swift */,
 				95A121251FC3E0B2001DC9DD /* ServerManager.swift */,
+				95E7CCF71FC43656000FCDD6 /* Utility.swift */,
 			);
 			path = "Helper classes";
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95E7CCF81FC43656000FCDD6 /* Utility.swift in Sources */,
 				95A121261FC3E0B2001DC9DD /* ServerManager.swift in Sources */,
 				9567FE361FC30CA100C39FD1 /* SearchTableViewHandler.swift in Sources */,
 				9567FE401FC32A5600C39FD1 /* CircularView.swift in Sources */,

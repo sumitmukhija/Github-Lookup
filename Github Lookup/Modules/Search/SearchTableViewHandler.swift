@@ -25,7 +25,9 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let query = searchBar.text
         {
+            super.showHUD()
             ServerManager.getUserDetails(name: query, completion: { (err, usr) in
+                super.hideHUD()
                 if let _ = usr
                 {
                     UserDefaultsHelper.addSearchCount()
@@ -71,7 +73,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
         cell.lblEmail.text = activeUser.email
         cell.lblGitUsername.text = activeUser.login
         cell.lblOrganization.text = activeUser.company
-        cell.lblLastUpdated.text = "Last activity: \(activeUser.updatedAt!)"
+        cell.lblLastUpdated.text = "Last activity: \(activeUser.updatedAt!))"
         if activeUser.avatarUrl != GEN_STRINGS.NO_URL
         {
             let url = URL(string:activeUser.avatarUrl)

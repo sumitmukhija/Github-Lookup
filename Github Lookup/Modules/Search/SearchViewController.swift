@@ -31,6 +31,11 @@ class SearchViewController: BaseTabViewController, UICollectionViewDelegate, UIC
         initializeSearchTableView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        searchBarOutlet.becomeFirstResponder()
+    }
+    
     func initializeSearchTableView()
     {
         let nib = UINib(nibName: FILE_NAMES.SEARCH_TABLE_CELL, bundle: nil)
