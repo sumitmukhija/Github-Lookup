@@ -67,6 +67,12 @@ class BaseTabViewController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
     }
     
+    func share(message: String) {
+        let objectsToShare = [message] as [Any]
+        let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+        self.present(activityVC, animated: true, completion: nil)
+    }
+    
     func showHUD()
     {
         if let _ = hud
@@ -83,6 +89,7 @@ class BaseTabViewController: UIViewController {
             hud!.dismiss(afterDelay: 1.0)
         }
     }
+    
     
     @objc func backBtnPressed(sender: AnyObject)
     {

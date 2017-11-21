@@ -20,5 +20,5 @@ class Utility {
         dateFormatter.dateFormat = "dd/MM/yyyy"
         return dateFormatter.string(from:dateProcessed!)
     }
-
+    
 }

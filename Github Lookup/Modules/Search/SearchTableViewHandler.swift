@@ -64,6 +64,30 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
+        let activeUser = dataArray[indexPath.row]
+        let actionSheet = UIAlertController(title: "Select an action", message: "What would you like to do with \(activeUser.login!)'s profile", preferredStyle: .actionSheet)
+        
+        let bookmarkAction = UIAlertAction(title: "Bookmark", style: .default) { (action) in
+            
+        }
+        
+        let viewAction = UIAlertAction(title: "View", style: .default) { (action) in
+            
+        }
+        
+        let shareAction = UIAlertAction(title: "Share", style: .default) { (action) in
+            let content = "Hey! Check out \(activeUser.login!) on GitHub.\n\n\(activeUser.htmlUrl!)"
+            super.share(message: content)
+        }
+        
+        let cancelAction = UIAlertAction(title: "Dismiss", style: .destructive) { (action) in
+            
+        }
+        actionSheet.addAction(viewAction)
+        actionSheet.addAction(shareAction)
+        actionSheet.addAction(bookmarkAction)
+        actionSheet.addAction(cancelAction)
+        self.present(actionSheet, animated: true, completion: nil)
     }
     
     func configureCell(activeUser: User, cell: UserSearchTableViewCell)
