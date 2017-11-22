@@ -16,13 +16,12 @@ class HistoryViewController: BaseTabViewController, UITableViewDelegate, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         title = TITLES.HISTORY
-        historyRows = CoreDataHelper.getHistoryRows()
         initializeTableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        historyTableView.reloadData()
+        reloadTable()
     }
     
     func initializeTableView()
@@ -53,6 +52,12 @@ class HistoryViewController: BaseTabViewController, UITableViewDelegate, UITable
             return historyRows!.count
         }
         return 0
+    }
+    
+    func reloadTable()
+    {
+        historyRows = CoreDataHelper.getHistoryRows()
+        historyTableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
