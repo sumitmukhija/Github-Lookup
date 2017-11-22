@@ -12,11 +12,17 @@ extension BookmarksViewController
 {
     @objc(tableView:didSelectRowAtIndexPath:) func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let activeUser = (isSearchActive == false ? dataSource[indexPath.row] : filteredArray[indexPath.row])
+        let profileViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: IDENTIFIERS.PROFILE_VIEW_CONTROLLER) as! ProfileViewController
+        UserDefaultsHelper.addViewedCount()
+        profileViewController.user = activeUser
+        profileViewController.shouldGetImage = true
+        self.navigationController?.pushViewController(profileViewController, animated: true)
     }
     
     @objc(tableView:cellForRowAtIndexPath:) func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: IDENTIFIERS.SEARCH_TABLE_CELL) as! UserSearchTableViewCell
-        let activeUser = dataSource[indexPath.row]
+        let activeUser = (isSearchActive == false ? dataSource[indexPath.row] : filteredArray[indexPath.row])
         configureCell(activeUser: activeUser, cell: cell, isLocalSearch: true)
         return cell
     }
@@ -31,13 +37,19 @@ extension BookmarksViewController
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         isSearchActive = true
-        filteredArray = dataSource.filter({ (user) -> Bool in
-            if(user.login.contains(searchText))
-            {
-                return true
-            }
-            return false
-        })
+        if(searchText.characters.count == 0)
+        {
+            isSearchActive = false
+        }
+        else{
+            filteredArray = dataSource.filter({ (user) -> Bool in
+                if(user.login.lowercased().contains(searchText.lowercased()))
+                {
+                    return true
+                }
+                return false
+            })
+        }
         tableView.reloadData()
     }
 }

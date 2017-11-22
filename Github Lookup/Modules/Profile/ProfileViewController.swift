@@ -12,6 +12,7 @@ class ProfileViewController: BaseTabViewController, UICollectionViewDelegate, UI
     
     var user: User?
     var userImage: UIImage?
+    var shouldGetImage: Bool? = false
     
     var stats: [[String: Int]]?
     var colors = [COLORS.MAT_CYAN, COLORS.MAT_TEAL, COLORS.MAT_AMBER,  COLORS.MAT_GREEN]
@@ -48,8 +49,18 @@ class ProfileViewController: BaseTabViewController, UICollectionViewDelegate, UI
         }
         else
         {
-            //this case would never happen though, still fallback
             imgProfile.image = #imageLiteral(resourceName: "img_male_avatar")
+        }
+        if(shouldGetImage!)
+        {
+            DispatchQueue.global(qos: .background).async {
+                let url = URL(string:(self.user?.avatarUrl)!)
+                let data = try? Data(contentsOf: url!)
+                let image: UIImage = UIImage(data: data!)!
+                DispatchQueue.main.async {
+                    self.imgProfile.image = image
+                }
+            }
         }
         lblWorkplace.text = user!.company!
         lblBio.text  = user!.bio!
