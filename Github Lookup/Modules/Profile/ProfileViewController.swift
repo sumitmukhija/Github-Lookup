@@ -113,9 +113,23 @@ class ProfileViewController: BaseTabViewController, UICollectionViewDelegate, UI
         }
         else
         {
-            let followListViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: IDENTIFIERS.FOLLOW_LIST_VC_ID) as! FollowListViewController
-            followListViewController.operationMode = opMode
-            self.navigationController?.pushViewController(followListViewController, animated: true)
+            showHUD()
+            ServerManager.getUserFollowers(url: user!.followersUrl.replacingOccurrences(of: "followers", with: "following"), completion: { (error, user) in
+                super.hideHUD()
+                let followListViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: IDENTIFIERS.FOLLOW_LIST_VC_ID) as! FollowListViewController
+                followListViewController.operationMode = opMode
+                if let _ = user
+                {
+                    followListViewController.dataSource = user
+                    self.navigationController?.pushViewController(followListViewController, animated: true)
+                }
+                else{
+                    if let _ = error
+                    {
+                        Utility.showErrorAlert(code: error!.code)
+                    }
+                }
+            })
         }
     }
     

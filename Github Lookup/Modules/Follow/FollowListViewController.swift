@@ -40,10 +40,6 @@ class FollowListViewController: BaseTabViewController, UITableViewDelegate, UITa
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if operationMode == OPMODE.FOLLOWING
-        {
-            Utility.showInfoAlert(msg: "The feature is not supported by the API yet!")
-        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
