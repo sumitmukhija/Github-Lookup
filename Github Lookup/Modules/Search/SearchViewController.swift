@@ -34,6 +34,7 @@ class SearchViewController: BaseTabViewController, UICollectionViewDelegate, UIC
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         searchBarOutlet.becomeFirstResponder()
+        tileCollectionView.reloadData()
     }
     
     func initializeSearchTableView()

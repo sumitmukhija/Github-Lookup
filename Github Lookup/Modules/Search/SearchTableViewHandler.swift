@@ -90,6 +90,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
         
         let viewAction = UIAlertAction(title: "View", style: .default) { (action) in
             let profileViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: IDENTIFIERS.PROFILE_VIEW_CONTROLLER) as! ProfileViewController
+            UserDefaultsHelper.addViewedCount()
             profileViewController.user = activeUser
             if let _ = currentUserImage
             {
@@ -120,7 +121,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
         cell.lblEmail.text = activeUser.email
         cell.lblGitUsername.text = activeUser.login
         cell.lblOrganization.text = activeUser.company
-        cell.lblLastUpdated.text = "Last activity: \(activeUser.updatedAt!))"
+        cell.lblLastUpdated.text = "Last activity: \(Utility.beautifyDate(date: activeUser.updatedAt!)))"
         if activeUser.avatarUrl != GEN_STRINGS.NO_URL
         {
             let url = URL(string:activeUser.avatarUrl)

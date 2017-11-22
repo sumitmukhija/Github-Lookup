@@ -33,10 +33,15 @@ class Utility {
     class func beautifyDate(date: Date) -> String
     {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-        let dateProcessed = dateFormatter.date(from:"\(date)")
-        dateFormatter.dateFormat = "dd/MM/yyyy"
-        return dateFormatter.string(from:dateProcessed!)
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        dateFormatter.timeZone = NSTimeZone(name: "UTC") as TimeZone!
+        //let date = dateFormatter.date(from: "\(date)")// create   date from string
+        
+        dateFormatter.dateFormat = "EEE, MMM d, yyyy - h:mm a"
+        dateFormatter.timeZone = NSTimeZone.local
+    
+        let timeStamp = dateFormatter.string(from: date)
+        return timeStamp
     }
     
     class func isInternetAvailable() -> Bool {
