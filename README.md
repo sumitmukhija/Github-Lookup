@@ -9,6 +9,8 @@ Develop a pseudo iOS application which would let users help search and analyse G
 <ul>
 <li> Xcode 8 </li>
 <li> Swift 3 </li>
+<li> iOS 8 & above </li>
+<li> Portrait mode </li>
 </ul>
 
 # YouTube video demo
