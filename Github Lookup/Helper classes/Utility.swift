@@ -24,6 +24,34 @@ class Utility {
         alert.show()
     }
     
+    class func showErrorAlert(code: Int)
+    {
+        var msg = "Something went wrong. Try again later!"
+        switch code {
+        case 400:
+            msg = "We encountered a bad request. Please try again later"
+            break
+        case 404:
+            msg = "The searched resource was not found. Please check or alter your keywords"
+            break
+        case 401: //Won't happen
+            msg = "You are not authorized to access this."
+            break
+        case 500:
+            msg = "We encountered an internal server error. Please try again later"
+            break
+        case 502:
+            msg = "We encountered an bad gateway error. Please try again later"
+            break
+        case 504:
+            msg = "We encountered a timeout. Please try again later"
+            break
+        default:
+            msg = "Something went wrong. Try again later!"
+        }
+        showErrorAlert(msg: msg)
+    }
+    
     class func showErrorAlert(msg: String)
     {
         let alert = UIAlertView(title: "Err", message: msg, delegate: nil, cancelButtonTitle: "Okay")
@@ -32,16 +60,21 @@ class Utility {
     
     class func beautifyDate(date: Date) -> String
     {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
-        dateFormatter.timeZone = NSTimeZone(name: "UTC") as TimeZone!
-        //let date = dateFormatter.date(from: "\(date)")// create   date from string
-        
-        dateFormatter.dateFormat = "EEE, MMM d, yyyy - h:mm a"
-        dateFormatter.timeZone = NSTimeZone.local
+        let formatter = DateFormatter()
+        formatter.dateFormat = "h:mm a 'on' MMMM dd, yyyy"
+        return formatter.string(from: date)
+    }
     
-        let timeStamp = dateFormatter.string(from: date)
-        return timeStamp
+    class func beautifyServerDateString(dateString: String) -> String
+    {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = NSLocale(localeIdentifier: "en_US_POSIX") as Locale!
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZ"
+        if let dt = dateFormatter.date(from: dateString)
+        {
+            return beautifyDate(date: dt)
+        }
+        return "Date not found!"
     }
     
     class func isInternetAvailable() -> Bool {

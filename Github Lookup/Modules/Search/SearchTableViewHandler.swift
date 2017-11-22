@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UICountingLabel
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate
 {
@@ -54,6 +55,10 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
                 }
                 else
                 {
+                    if let _ = err
+                    {
+                        Utility.showErrorAlert(code: err!.code)
+                    }
                     self.dataArray.removeAll()
                     self.tableViewOutlet.reloadData()
                 }
@@ -121,7 +126,10 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
         cell.lblEmail.text = activeUser.email
         cell.lblGitUsername.text = activeUser.login
         cell.lblOrganization.text = activeUser.company
-        cell.lblLastUpdated.text = "Last activity: \(Utility.beautifyDate(date: activeUser.updatedAt!)))"
+        if activeUser.updatedAt! != ""
+        {
+            cell.lblLastUpdated.text = "Last activity: \(Utility.beautifyServerDateString(dateString: activeUser.updatedAt!))"
+        }
         if activeUser.avatarUrl != GEN_STRINGS.NO_URL
         {
             let url = URL(string:activeUser.avatarUrl)
@@ -129,9 +137,14 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
             let image: UIImage = UIImage(data: data!)!
             cell.imgAvatar.image = image
         }
-        cell.lblNumberOfGists.text = "\(activeUser.publicGists!)"
-        cell.lblNumberOfFollowers.text = "\(activeUser.followers!)"
-        cell.lblNumberOfRepos.text = "\(activeUser.publicRepos!)"
-        cell.lblNumberOfFollowing.text = "\(activeUser.following!)"
+        
+        cell.lblNumberOfRepos.format = "%d"
+        cell.lblNumberOfFollowers.format = "%d"
+        cell.lblNumberOfGists.format = "%d"
+        cell.lblNumberOfFollowing.format = "%d"
+        cell.lblNumberOfRepos.count(from: 0.0, to: CGFloat(activeUser.publicRepos!), withDuration: 2.0)
+        cell.lblNumberOfFollowers.count(from: 0.0, to: CGFloat(activeUser.followers!), withDuration: 2.0)
+        cell.lblNumberOfGists.count(from: 0.0, to: CGFloat(activeUser.publicGists!), withDuration: 2.0)
+        cell.lblNumberOfFollowing.count(from: 0.0, to: CGFloat(activeUser.following!), withDuration: 2.0)
     }
 }

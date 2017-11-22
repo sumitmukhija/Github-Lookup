@@ -93,7 +93,10 @@ class ProfileViewController: BaseTabViewController, UICollectionViewDelegate, UI
                     self.navigationController?.pushViewController(followListViewController, animated: true)
                 }
                 else{
-                    Utility.showDisclaimerAlert(msg: GEN_STRINGS.NO_FOLLOWERS)
+                    if let _ = error
+                    {
+                        Utility.showErrorAlert(code: error!.code)
+                    }
                 }
             })
         }

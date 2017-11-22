@@ -22,10 +22,10 @@ class CoreDataHelper {
         let context = getContext()
         let record = NSEntityDescription.insertNewObject(forEntityName: IDENTIFIERS.CD_ENTITY_HISTORY, into: context)
         record.setValue(query, forKey: IDENTIFIERS.CD_HISTORY_ATTRIB_QUERY)
-        record.setValue(Date(), forKey: IDENTIFIERS.CD_HISTORY_ATTRIB_WHEN)
+        let dateString = Utility.beautifyDate(date: Date())
+        record.setValue(dateString, forKey: IDENTIFIERS.CD_HISTORY_ATTRIB_WHEN)
         do {
             try context.save()
-            print("history item locally saved..")
         }
         catch let error as NSError{
             print(error.localizedDescription)

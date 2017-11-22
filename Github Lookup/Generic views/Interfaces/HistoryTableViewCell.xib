@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -13,13 +14,13 @@
             <rect key="frame" x="0.0" y="0.0" width="673" height="62"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qje-aw-Ppy" id="Pjt-Yx-8C3">
-                <frame key="frameInset" width="673" height="61"/>
+                <frame key="frameInset" width="673" height="61.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_redo_history" translatesAutoresizingMaskIntoConstraints="NO" id="Zel-vY-FMR">
                         <constraints>
-                            <constraint firstAttribute="height" constant="16" id="W2w-Uu-rjS"/>
-                            <constraint firstAttribute="width" constant="16" id="pmd-HJ-9gi"/>
+                            <constraint firstAttribute="height" constant="16" id="28D-Vw-DYX"/>
+                            <constraint firstAttribute="width" constant="16" id="2L8-Tb-Jb5"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMy-Jc-QBg">
@@ -34,21 +35,23 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="d9o-KM-l2j" firstAttribute="bottom" secondItem="Zel-vY-FMR" secondAttribute="bottom" id="4Vh-B1-8jd"/>
-                    <constraint firstItem="d9o-KM-l2j" firstAttribute="width" secondItem="nMy-Jc-QBg" secondAttribute="width" id="PFC-Ig-Ik4"/>
-                    <constraint firstItem="Zel-vY-FMR" firstAttribute="centerY" secondItem="Pjt-Yx-8C3" secondAttribute="centerY" id="Tsd-9b-e0C"/>
-                    <constraint firstItem="d9o-KM-l2j" firstAttribute="trailing" secondItem="nMy-Jc-QBg" secondAttribute="trailing" id="Vjj-VI-1vb"/>
-                    <constraint firstItem="nMy-Jc-QBg" firstAttribute="top" secondItem="Zel-vY-FMR" secondAttribute="top" id="lX2-wB-cmj"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="nMy-Jc-QBg" secondAttribute="trailing" id="m2O-Xl-eMJ"/>
-                    <constraint firstItem="nMy-Jc-QBg" firstAttribute="leading" secondItem="Zel-vY-FMR" secondAttribute="trailing" constant="53" id="n7x-f7-qK2"/>
-                    <constraint firstAttribute="leadingMargin" secondItem="Zel-vY-FMR" secondAttribute="leading" id="qlH-r1-GH4"/>
+                    <constraint firstItem="nMy-Jc-QBg" firstAttribute="leading" secondItem="Zel-vY-FMR" secondAttribute="trailing" constant="53" id="A5t-g7-0qp"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="d9o-KM-l2j" secondAttribute="bottom" id="ABk-15-j5q"/>
+                    <constraint firstItem="d9o-KM-l2j" firstAttribute="width" secondItem="nMy-Jc-QBg" secondAttribute="width" id="Gpg-Zx-QcX"/>
+                    <constraint firstItem="d9o-KM-l2j" firstAttribute="height" secondItem="nMy-Jc-QBg" secondAttribute="height" id="HA7-Cz-Fap"/>
+                    <constraint firstItem="nMy-Jc-QBg" firstAttribute="height" secondItem="Pjt-Yx-8C3" secondAttribute="height" multiplier="1:2" id="QYr-fC-5c8"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="nMy-Jc-QBg" secondAttribute="trailing" id="i2U-7u-Efx"/>
+                    <constraint firstItem="Zel-vY-FMR" firstAttribute="centerY" secondItem="Pjt-Yx-8C3" secondAttribute="centerY" id="ktr-wC-GoJ"/>
+                    <constraint firstAttribute="topMargin" secondItem="nMy-Jc-QBg" secondAttribute="top" id="mBz-Kz-N3f"/>
+                    <constraint firstItem="d9o-KM-l2j" firstAttribute="trailing" secondItem="nMy-Jc-QBg" secondAttribute="trailing" id="o8S-2C-eat"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="Zel-vY-FMR" secondAttribute="leading" id="rUa-YI-PSM"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="lblDate" destination="d9o-KM-l2j" id="MLT-ze-3c6"/>
                 <outlet property="lblName" destination="nMy-Jc-QBg" id="N9y-ip-DDD"/>
             </connections>
-            <point key="canvasLocation" x="-46.5" y="-50"/>
+            <point key="canvasLocation" x="-290" y="-398"/>
         </tableViewCell>
     </objects>
     <resources>

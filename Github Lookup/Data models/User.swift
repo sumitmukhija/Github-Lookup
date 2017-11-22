@@ -24,5 +24,5 @@ class User {
     var location:String!
     var bio: String!
     var email: String!
-    var updatedAt: Date!
+    var updatedAt: String!
 }

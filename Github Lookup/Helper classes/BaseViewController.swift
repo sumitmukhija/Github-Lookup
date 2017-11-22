@@ -86,7 +86,7 @@ class BaseTabViewController: UIViewController {
     {
         if let _ = hud
         {
-            hud!.dismiss(afterDelay: 1.0)
+            hud!.dismiss(afterDelay: 0.1)
         }
     }
     

@@ -37,6 +37,7 @@ struct GEN_STRINGS
     static let NO_LOC = "No location"
     static let NO_NAME = "Unknown"
     static let NO_URL = "No url"
+    static let COPY_DONE = "The history item has been copied to your clipboard. You might search for the user from first tab."
     static let NO_SPC = "The search query cannot contain spaces. Try again!"
     static let NO_NET = "You appear to be offline. Try again!"
     static let NO_FOLLOWERS = "The user does not have any follower"

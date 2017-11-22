@@ -7,17 +7,18 @@
 //
 
 import UIKit
+import UICountingLabel
 
 class UserSearchTableViewCell: UITableViewCell {
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblOrganization: UILabel!
     @IBOutlet weak var imgAvatar: UIImageView!
     @IBOutlet weak var lblEmail: UILabel!
-    @IBOutlet weak var lblNumberOfRepos: UILabel!
-    @IBOutlet weak var lblNumberOfFollowing: UILabel!
+    @IBOutlet weak var lblNumberOfRepos: UICountingLabel!
+    @IBOutlet weak var lblNumberOfFollowing: UICountingLabel!
     @IBOutlet weak var lblLastUpdated: UILabel!
-    @IBOutlet weak var lblNumberOfGists: UILabel!
-    @IBOutlet weak var lblNumberOfFollowers: UILabel!
+    @IBOutlet weak var lblNumberOfGists: UICountingLabel!
+    @IBOutlet weak var lblNumberOfFollowers: UICountingLabel!
     @IBOutlet weak var lblGitUsername: UILabel!
     @IBOutlet weak var lblCity: UILabel!
     

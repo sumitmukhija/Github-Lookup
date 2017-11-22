@@ -56,22 +56,22 @@
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="10"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQt-Ha-Mdy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQt-Ha-Mdy" customClass="UICountingLabel">
                                 <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e87-UM-WIU">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e87-UM-WIU" customClass="UICountingLabel">
                                 <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOo-ro-hEt">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOo-ro-hEt" customClass="UICountingLabel">
                                 <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cc4-va-D6F">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cc4-va-D6F" customClass="UICountingLabel">
                                 <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -183,13 +183,13 @@
                 <outlet property="lblGitUsername" destination="ZuB-c9-X3o" id="e4T-rj-O0c"/>
                 <outlet property="lblLastUpdated" destination="iiF-RR-3iy" id="peC-mX-YeA"/>
                 <outlet property="lblName" destination="EmB-bR-KDx" id="FV9-qN-LWq"/>
-                <outlet property="lblNumberOfFollowers" destination="MOo-ro-hEt" id="pLf-ut-ORb"/>
-                <outlet property="lblNumberOfFollowing" destination="e87-UM-WIU" id="t8i-Ks-4wc"/>
-                <outlet property="lblNumberOfGists" destination="MOo-ro-hEt" id="4QD-bp-UCs"/>
-                <outlet property="lblNumberOfRepos" destination="JQt-Ha-Mdy" id="rr3-YS-64j"/>
+                <outlet property="lblNumberOfFollowers" destination="MOo-ro-hEt" id="WmE-k3-Jtj"/>
+                <outlet property="lblNumberOfFollowing" destination="e87-UM-WIU" id="unS-65-bkv"/>
+                <outlet property="lblNumberOfGists" destination="cc4-va-D6F" id="ILJ-4S-sTm"/>
+                <outlet property="lblNumberOfRepos" destination="JQt-Ha-Mdy" id="FU5-oo-orE"/>
                 <outlet property="lblOrganization" destination="1kT-Lu-aWg" id="T4H-wy-eHF"/>
             </connections>
-            <point key="canvasLocation" x="-572" y="-446"/>
+            <point key="canvasLocation" x="-578" y="-833"/>
         </tableViewCell>
     </objects>
     <resources>
