@@ -62,6 +62,7 @@ struct IDENTIFIERS
     static let DEF_VIEW_COUNT = "viewCount"
     static let DEF_SAVE_COUNT = "saveCount"
     static let CD_ENTITY_HISTORY = "History"
+    static let CD_ENTITY_BOOKMARKS = "Bookmark"
     static let CD_HISTORY_ATTRIB_QUERY = "query"
     static let CD_HISTORY_ATTRIB_WHEN = "dateTime"
 }

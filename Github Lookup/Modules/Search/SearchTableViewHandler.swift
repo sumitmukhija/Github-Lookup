@@ -90,10 +90,16 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
         let actionSheet = UIAlertController(title: "Select an action", message: "What would you like to do with \(activeUser.login!)'s profile", preferredStyle: .actionSheet)
         
         let bookmarkAction = UIAlertAction(title: "Bookmark", style: .default) { (action) in
-            
-            
-            
-            UserDefaultsHelper.addSavedCount()
+                CoreDataHelper.saveUser(user: activeUser, completion: { (isSuccess) in
+                    if(isSuccess)!
+                    {
+                        Utility.showInfoAlert(msg: "\(activeUser.login!)'s profile successfully saved!")
+                        self.tileCollectionView.reloadData()
+                    }
+                    else{
+                        Utility.showErrorAlert(msg: "Couldn't bookmark \(activeUser.login!). Please try after some time")
+                    }
+                })
         }
         
         let viewAction = UIAlertAction(title: "View", style: .default) { (action) in
@@ -150,4 +156,5 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
         cell.lblNumberOfGists.count(from: 0.0, to: CGFloat(activeUser.publicGists!), withDuration: 1.0)
         cell.lblNumberOfFollowing.count(from: 0.0, to: CGFloat(activeUser.following!), withDuration: 1.0)
     }
+
 }

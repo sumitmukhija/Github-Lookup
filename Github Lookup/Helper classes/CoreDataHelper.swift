@@ -32,6 +32,38 @@ class CoreDataHelper {
         }
     }
     
+    class func saveUser(user: User, completion:(_ isSuccess: Bool?) -> Void)
+    {
+        //Intentionally not creating NSManagedObject class to maintain uniformity
+        let context = getContext()
+        let record = NSEntityDescription.insertNewObject(forEntityName: IDENTIFIERS.CD_ENTITY_BOOKMARKS, into: context)
+        record.setValue(user.avatarUrl, forKey: "avatarUrl")
+        record.setValue(user.bio, forKey: "bio")
+        record.setValue(user.company, forKey: "company")
+        record.setValue(user.email, forKey: "email")
+        record.setValue(user.followers, forKey: "followers")
+        record.setValue(user.following, forKey: "following")
+        record.setValue(user.followingUrl, forKey:"followingUrl")
+        record.setValue(user.followersUrl, forKey: "followersUrl")
+        record.setValue(user.htmlUrl, forKey: "htmlUrl")
+        record.setValue(user.location, forKey: "location")
+        record.setValue(user.login, forKey: "login")
+        record.setValue(user.name, forKey: "name")
+        record.setValue(user.publicGists, forKey: "publicGists")
+        record.setValue(user.publicRepos, forKey: "publicRepos")
+        record.setValue(user.updatedAt, forKey: "updatedAt")
+        do {
+            try context.save()
+            UserDefaultsHelper.addSavedCount()
+            completion(true)
+        }
+        catch let error as NSError{
+            print(error.localizedDescription)
+            completion(false)
+        }
+
+    }
+    
     class func getHistoryRows() -> [AnyObject]?
     {
         var results:[AnyObject]?
@@ -49,55 +81,3 @@ class CoreDataHelper {
     }
     
 }
-
-
-//class func getLatestStoredContent(type: Int? = 0) -> Post?
-//{
-//    var results:[AnyObject]?
-//    let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
-//    let context = delegate.managedObjectContext
-//    let request = NSFetchRequest(entityName: "Post")
-//    request.predicate = NSPredicate(format: "type == %d", type!)
-//    do{
-//        results = try context.executeFetchRequest(request)
-//    }
-//    catch let error as NSError
-//    {
-//        print(error.localizedDescription)
-//    }
-//    if(results?.count == 0)
-//    {
-//        return nil
-//    }
-//    return results?.last as? Post
-//}
-//
-//
-//class func storePost(post: Content)
-//{
-//    if(post.type == 0)
-//    {
-//        truncatePrayers()
-//    }
-//    else if(post.type == 1)
-//    {
-//        truncateThoughts()
-//    }
-//    let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
-//    let context = delegate.managedObjectContext
-//    let record = NSEntityDescription.insertNewObjectForEntityForName("Post", inManagedObjectContext: context) as? Post
-//    record?.date = NSDate()
-//    record?.content = post.text
-//    if let _ = post.createdByName
-//    {
-//        record?.name = post.createdByName!
-//    }
-//    record?.type = NSNumber(integer: post.type!)
-//    do {
-//        try context.save()
-//        print("post locally saved..")
-//    }
-//    catch let error as NSError{
-//        print(error.localizedDescription)
-//    }
-//}
