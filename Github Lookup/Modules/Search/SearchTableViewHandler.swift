@@ -11,18 +11,8 @@ import UICountingLabel
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate
 {
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = tableView.dequeueReusableCell(withIdentifier: "cellHeader") as! SearchTableHeader
-        return header
-    }
-    
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
-    }
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {

@@ -7,11 +7,6 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="digital-7.ttf">
-            <string>Digital-7</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Landing View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -142,39 +137,13 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ety-jL-EEo">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" placeholder="Search for a GitHub username" id="4kE-FN-Nbz">
-                                    <rect key="frame" x="0.0" y="0.0" width="1000" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="288" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="twitter" keyboardAppearance="alert"/>
                                     <connections>
                                         <outlet property="delegate" destination="rUO-9w-wdd" id="5KI-nc-SWX"/>
                                     </connections>
                                 </searchBar>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchTableHeader" rowHeight="40" id="dMp-V5-27t" customClass="SearchTableHeader" customModule="Github_Lookup" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="72" width="1000" height="40"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" tableViewCell="dMp-V5-27t" id="JmX-S9-woe">
-                                            <frame key="frameInset" width="1000" height="39.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOCALLY SAVED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfJ-Eb-M8U">
-                                                    <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="17"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="cfJ-Eb-M8U" firstAttribute="width" secondItem="JmX-S9-woe" secondAttribute="width" id="Jzs-Ho-GtV"/>
-                                                <constraint firstItem="cfJ-Eb-M8U" firstAttribute="centerX" secondItem="JmX-S9-woe" secondAttribute="centerX" id="LeF-QI-28W"/>
-                                                <constraint firstItem="cfJ-Eb-M8U" firstAttribute="height" secondItem="JmX-S9-woe" secondAttribute="height" id="gqZ-3G-51I"/>
-                                                <constraint firstItem="cfJ-Eb-M8U" firstAttribute="centerY" secondItem="JmX-S9-woe" secondAttribute="centerY" id="xfQ-a8-GvJ"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="lblTitle" destination="cfJ-Eb-M8U" id="7Lq-oD-BD1"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

@@ -8,11 +8,6 @@
 
 import UIKit
 
-class SearchTableHeader: UITableViewCell
-{
-    @IBOutlet weak var lblTitle: UILabel!
-}
-
 class SearchViewController: BaseTabViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     var isSearchActive: Bool? = false

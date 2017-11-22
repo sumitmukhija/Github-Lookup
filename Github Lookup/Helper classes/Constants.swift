@@ -55,7 +55,6 @@ struct IDENTIFIERS
     static let FOLLOW_CELL_ID = "followCellId"
     static let FOLLOW_LIST_VC_ID = "FollowListViewController"
     static let PROFILE_VIEW_CONTROLLER = "ProfileViewController"
-    static let SEARCH_TABLE_HEAD = "searchTableHeader"
     static let HISTORY_CELL_ID = "historyTableViewCell"
     static let SEARCH_TABLE_CELL = "searchTableCell"
     static let TILE_COLLECTION_CELL = "tileCollectionViewCell"
