@@ -73,11 +73,11 @@ class BaseTabViewController: UIViewController {
         self.present(activityVC, animated: true, completion: nil)
     }
     
-    func showHUD()
+    func showHUD(txt: String? = "Fetching content from GitHub")
     {
         if let _ = hud
         {
-            hud!.textLabel.text = "Fetching content from GitHub"
+            hud!.textLabel.text = txt!
             hud!.show(in: self.view)
         }
     }
@@ -90,6 +90,50 @@ class BaseTabViewController: UIViewController {
         }
     }
     
+    func configureCell(activeUser: User, cell: UserSearchTableViewCell, isLocalSearch: Bool? = false)
+    {
+        cell.lblName.text = activeUser.name
+        cell.lblCity.text = activeUser.location
+        cell.lblEmail.text = activeUser.email
+        cell.lblGitUsername.text = activeUser.login
+        cell.lblOrganization.text = activeUser.company
+        if activeUser.updatedAt! != ""
+        {
+            cell.lblLastUpdated.text = "Last activity: \(Utility.beautifyServerDateString(dateString: activeUser.updatedAt!))"
+        }
+        if activeUser.avatarUrl != GEN_STRINGS.NO_URL && isLocalSearch == false
+        {
+            let url = URL(string:activeUser.avatarUrl)
+            let data = try? Data(contentsOf: url!)
+            let image: UIImage = UIImage(data: data!)!
+            cell.imgAvatar.image = image
+        }
+        else{
+            if let _ = cell.imgAvatar
+            {
+                cell.imgAvatar.removeFromSuperview()
+            }
+        }
+        
+        if(isLocalSearch! == false)
+        {
+            cell.lblNumberOfRepos.format = "%d"
+            cell.lblNumberOfFollowers.format = "%d"
+            cell.lblNumberOfGists.format = "%d"
+            cell.lblNumberOfFollowing.format = "%d"
+            cell.lblNumberOfRepos.count(from: 0.0, to: CGFloat(activeUser.publicRepos!), withDuration: 1.0)
+            cell.lblNumberOfFollowers.count(from: 0.0, to: CGFloat(activeUser.followers!), withDuration: 1.0)
+            cell.lblNumberOfGists.count(from: 0.0, to: CGFloat(activeUser.publicGists!), withDuration: 1.0)
+            cell.lblNumberOfFollowing.count(from: 0.0, to: CGFloat(activeUser.following!), withDuration: 1.0)
+        }
+        else
+        {
+            cell.lblNumberOfGists.text = "\(activeUser.publicGists!)"
+            cell.lblNumberOfRepos.text = "\(activeUser.publicRepos!)"
+            cell.lblNumberOfFollowers.text = "\(activeUser.followers!)"
+            cell.lblNumberOfFollowing.text = "\(activeUser.following!)"
+        }
+    }
     
     @objc func backBtnPressed(sender: AnyObject)
     {

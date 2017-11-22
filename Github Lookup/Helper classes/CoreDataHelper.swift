@@ -17,6 +17,28 @@ class CoreDataHelper {
         return (UIApplication.shared.delegate as! AppDelegate).managedObjectContext
     }
     
+    class func getAllLocalUsers() -> [User]
+    {
+        var userArr = Array<User>()
+        var results:[AnyObject]?
+        let context = getContext()
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: IDENTIFIERS.CD_ENTITY_BOOKMARKS)
+        do{
+            results = try context.fetch(fetchRequest) as! [Bookmark]
+            for item in results!
+            {
+                let user = Utility.convertBookmarkToUser(bookmark: item as! Bookmark)
+                userArr.append(user)
+            }
+            return userArr
+        }
+        catch let error as NSError
+        {
+            print(error.localizedDescription)
+        }
+        return userArr
+    }
+    
     class func saveHistory(query: String)
     {
         let context = getContext()
@@ -34,24 +56,24 @@ class CoreDataHelper {
     
     class func saveUser(user: User, completion:(_ isSuccess: Bool?) -> Void)
     {
-        //Intentionally not creating NSManagedObject class to maintain uniformity
         let context = getContext()
-        let record = NSEntityDescription.insertNewObject(forEntityName: IDENTIFIERS.CD_ENTITY_BOOKMARKS, into: context)
-        record.setValue(user.avatarUrl, forKey: "avatarUrl")
-        record.setValue(user.bio, forKey: "bio")
-        record.setValue(user.company, forKey: "company")
-        record.setValue(user.email, forKey: "email")
-        record.setValue(user.followers, forKey: "followers")
-        record.setValue(user.following, forKey: "following")
-        record.setValue(user.followingUrl, forKey:"followingUrl")
-        record.setValue(user.followersUrl, forKey: "followersUrl")
-        record.setValue(user.htmlUrl, forKey: "htmlUrl")
-        record.setValue(user.location, forKey: "location")
-        record.setValue(user.login, forKey: "login")
-        record.setValue(user.name, forKey: "name")
-        record.setValue(user.publicGists, forKey: "publicGists")
-        record.setValue(user.publicRepos, forKey: "publicRepos")
-        record.setValue(user.updatedAt, forKey: "updatedAt")
+        let record = NSEntityDescription.insertNewObject(forEntityName: IDENTIFIERS.CD_ENTITY_BOOKMARKS, into: context) as! Bookmark
+        
+        record.avatarUrl = user.avatarUrl
+        record.bio = user.bio
+        record.company = user.company
+        record.email = user.email
+        record.followingUrl = user.followingUrl
+        record.followersUrl = user.followersUrl
+        record.htmlUrl = user.htmlUrl
+        record.location = user.location
+        record.login = user.login
+        record.name = user.name
+        record.publicGists = Int32(user.publicGists)
+        record.publicRepos = Int32(user.publicRepos)
+        record.followers = Int32(user.followers)
+        record.following = Int32(user.following)
+        record.updatedAt = user.updatedAt
         do {
             try context.save()
             UserDefaultsHelper.addSavedCount()

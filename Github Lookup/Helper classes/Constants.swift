@@ -47,6 +47,7 @@ struct TITLES
 {
     static let SEARCH = "Search"
     static let HISTORY = "History"
+    static let BOOKMARKS = "Bookmarks"
 }
 
 struct IDENTIFIERS

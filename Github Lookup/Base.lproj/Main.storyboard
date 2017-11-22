@@ -141,8 +141,8 @@
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ety-jL-EEo">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" placeholder="Search for a GitHub user" id="4kE-FN-Nbz">
-                                    <rect key="frame" x="0.0" y="0.0" width="288" height="44"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" placeholder="Search for a GitHub username" id="4kE-FN-Nbz">
+                                    <rect key="frame" x="0.0" y="0.0" width="1000" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="twitter" keyboardAppearance="alert"/>
                                     <connections>
@@ -151,10 +151,10 @@
                                 </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchTableHeader" rowHeight="40" id="dMp-V5-27t" customClass="SearchTableHeader" customModule="Github_Lookup" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="72" width="288" height="40"/>
+                                        <rect key="frame" x="0.0" y="72" width="1000" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" tableViewCell="dMp-V5-27t" id="JmX-S9-woe">
-                                            <frame key="frameInset" width="288" height="39"/>
+                                            <frame key="frameInset" width="1000" height="39.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOCALLY SAVED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfJ-Eb-M8U">
@@ -300,7 +300,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="MKB-sw-I6J">
-                                        <rect key="frame" x="0.0" y="23" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -400,10 +400,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="followCellId" rowHeight="100" id="qTQ-w7-9iT" customClass="FollowListCell" customModule="Github_Lookup" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="320" height="100"/>
+                                        <rect key="frame" x="0.0" y="92" width="1000" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qTQ-w7-9iT" id="RuT-ZG-nIi">
-                                            <frame key="frameInset" width="320" height="99"/>
+                                            <frame key="frameInset" width="1000" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6T8-X1-dma">
@@ -475,9 +475,31 @@
                     <view key="view" contentMode="scaleToFill" id="e66-Qh-cRI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eyB-is-ROi">
+                                <frame key="frameInset" minX="40" minY="176" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" barStyle="black" searchBarStyle="minimal" placeholder="Search by a Git username" id="UcT-we-5kU">
+                                    <rect key="frame" x="0.0" y="64" width="240" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <color key="barTintColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eyB-is-ROi" firstAttribute="centerX" secondItem="e66-Qh-cRI" secondAttribute="centerX" id="CaK-eq-wAW"/>
+                            <constraint firstItem="eyB-is-ROi" firstAttribute="width" secondItem="e66-Qh-cRI" secondAttribute="width" id="My6-id-B0e"/>
+                            <constraint firstItem="eyB-is-ROi" firstAttribute="height" secondItem="e66-Qh-cRI" secondAttribute="height" id="PEs-Ef-Vf3"/>
+                            <constraint firstItem="eyB-is-ROi" firstAttribute="centerY" secondItem="e66-Qh-cRI" secondAttribute="centerY" id="sLN-2W-IiF"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Xay-SE-N2z"/>
+                    <connections>
+                        <outlet property="searchBar" destination="UcT-we-5kU" id="7bY-yp-OQJ"/>
+                        <outlet property="tableView" destination="eyB-is-ROi" id="I9L-5x-Sys"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xes-oo-O2F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -522,7 +544,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tra-6N-cg1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="tab_img_search" id="3XH-m9-Zh3"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Jfi-H9-J8g">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jfi-H9-J8g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -561,7 +583,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vkm-NJ-2qd" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="tab_img_bookmarks" id="LYh-Jg-v6w"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="FFf-ZN-eak">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FFf-ZN-eak">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -580,7 +602,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cwb-Kx-t7x" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="tab_img_history" id="JQV-Et-tqK"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="qDY-Nd-xAp">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qDY-Nd-xAp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

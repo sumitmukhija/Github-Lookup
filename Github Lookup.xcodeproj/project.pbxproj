@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3BB1EBBCE6DE1EB7875913B7 /* Pods_Github_Lookup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C4D30AFE780D9CE2144E75 /* Pods_Github_Lookup.framework */; };
+		953940E41FC575FF0002A591 /* TableSearchHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953940E31FC575FF0002A591 /* TableSearchHandler.swift */; };
 		9546D3461FC44F75001788AC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9546D3451FC44F75001788AC /* ProfileViewController.swift */; };
 		9546D3491FC47474001788AC /* FollowListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9546D3481FC47474001788AC /* FollowListViewController.swift */; };
 		9567FE241FC2E88000C39FD1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9567FE231FC2E88000C39FD1 /* SearchViewController.swift */; };
@@ -37,11 +38,14 @@
 		95E7CCF41FC3F9DD000FCDD6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E7CCF31FC3F9DD000FCDD6 /* User.swift */; };
 		95E7CCF61FC41920000FCDD6 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E7CCF51FC41920000FCDD6 /* UserDefaultsHelper.swift */; };
 		95E7CCF81FC43656000FCDD6 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E7CCF71FC43656000FCDD6 /* Utility.swift */; };
+		95FF040C1FC56CA4000ABDB2 /* Bookmark+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FF040A1FC56CA4000ABDB2 /* Bookmark+CoreDataClass.swift */; };
+		95FF040D1FC56CA4000ABDB2 /* Bookmark+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FF040B1FC56CA4000ABDB2 /* Bookmark+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2BCC4543882846D30714F62F /* Pods-Github Lookup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github Lookup.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Github Lookup/Pods-Github Lookup.debug.xcconfig"; sourceTree = "<group>"; };
 		824CBEDA69D78309B0668B67 /* Pods-Github Lookup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github Lookup.release.xcconfig"; path = "Pods/Target Support Files/Pods-Github Lookup/Pods-Github Lookup.release.xcconfig"; sourceTree = "<group>"; };
+		953940E31FC575FF0002A591 /* TableSearchHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSearchHandler.swift; sourceTree = "<group>"; };
 		9546D3451FC44F75001788AC /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9546D3481FC47474001788AC /* FollowListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowListViewController.swift; sourceTree = "<group>"; };
 		9567FE231FC2E88000C39FD1 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +77,8 @@
 		95E7CCF31FC3F9DD000FCDD6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		95E7CCF51FC41920000FCDD6 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		95E7CCF71FC43656000FCDD6 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		95FF040A1FC56CA4000ABDB2 /* Bookmark+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bookmark+CoreDataClass.swift"; sourceTree = "<group>"; };
+		95FF040B1FC56CA4000ABDB2 /* Bookmark+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bookmark+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D6C4D30AFE780D9CE2144E75 /* Pods_Github_Lookup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Github_Lookup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -126,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				9567FE271FC2F08C00C39FD1 /* BookmarksViewController.swift */,
+				953940E31FC575FF0002A591 /* TableSearchHandler.swift */,
 			);
 			path = Bookmarks;
 			sourceTree = "<group>";
@@ -250,6 +257,8 @@
 		95B4BC381FC2CB160045D732 /* Data models */ = {
 			isa = PBXGroup;
 			children = (
+				95FF040A1FC56CA4000ABDB2 /* Bookmark+CoreDataClass.swift */,
+				95FF040B1FC56CA4000ABDB2 /* Bookmark+CoreDataProperties.swift */,
 				95B4BC391FC2CB160045D732 /* Github_Lookup.xcdatamodeld */,
 				95E7CCF31FC3F9DD000FCDD6 /* User.swift */,
 			);
@@ -413,6 +422,7 @@
 				95A121261FC3E0B2001DC9DD /* ServerManager.swift in Sources */,
 				9567FE361FC30CA100C39FD1 /* SearchTableViewHandler.swift in Sources */,
 				9567FE401FC32A5600C39FD1 /* CircularView.swift in Sources */,
+				95FF040C1FC56CA4000ABDB2 /* Bookmark+CoreDataClass.swift in Sources */,
 				9567FE281FC2F08C00C39FD1 /* BookmarksViewController.swift in Sources */,
 				95A121281FC3E127001DC9DD /* CoreDataHelper.swift in Sources */,
 				9567FE3A1FC31BD800C39FD1 /* HistoryTableViewCell.swift in Sources */,
@@ -423,6 +433,7 @@
 				95B4BC421FC2CE9E0045D732 /* BorderedButton.swift in Sources */,
 				9567FE341FC2FAE900C39FD1 /* TileCollectionViewHandler.swift in Sources */,
 				95B4BC321FC2CA910045D732 /* LandingViewController.swift in Sources */,
+				95FF040D1FC56CA4000ABDB2 /* Bookmark+CoreDataProperties.swift in Sources */,
 				9567FE2E1FC2F33500C39FD1 /* TileCollectionViewCell.swift in Sources */,
 				9567FE2A1FC2F0C300C39FD1 /* HistoryViewController.swift in Sources */,
 				95E7CCF41FC3F9DD000FCDD6 /* User.swift in Sources */,
@@ -430,6 +441,7 @@
 				9546D3461FC44F75001788AC /* ProfileViewController.swift in Sources */,
 				9546D3491FC47474001788AC /* FollowListViewController.swift in Sources */,
 				95B4BC3B1FC2CB170045D732 /* Github_Lookup.xcdatamodeld in Sources */,
+				953940E41FC575FF0002A591 /* TableSearchHandler.swift in Sources */,
 				95B4BC3D1FC2CB510045D732 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

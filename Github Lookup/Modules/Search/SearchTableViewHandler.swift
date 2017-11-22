@@ -127,34 +127,4 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
         actionSheet.addAction(cancelAction)
         self.present(actionSheet, animated: true, completion: nil)
     }
-    
-    func configureCell(activeUser: User, cell: UserSearchTableViewCell)
-    {
-        cell.lblName.text = activeUser.name
-        cell.lblCity.text = activeUser.location
-        cell.lblEmail.text = activeUser.email
-        cell.lblGitUsername.text = activeUser.login
-        cell.lblOrganization.text = activeUser.company
-        if activeUser.updatedAt! != ""
-        {
-            cell.lblLastUpdated.text = "Last activity: \(Utility.beautifyServerDateString(dateString: activeUser.updatedAt!))"
-        }
-        if activeUser.avatarUrl != GEN_STRINGS.NO_URL
-        {
-            let url = URL(string:activeUser.avatarUrl)
-            let data = try? Data(contentsOf: url!)
-            let image: UIImage = UIImage(data: data!)!
-            cell.imgAvatar.image = image
-        }
-        
-        cell.lblNumberOfRepos.format = "%d"
-        cell.lblNumberOfFollowers.format = "%d"
-        cell.lblNumberOfGists.format = "%d"
-        cell.lblNumberOfFollowing.format = "%d"
-        cell.lblNumberOfRepos.count(from: 0.0, to: CGFloat(activeUser.publicRepos!), withDuration: 1.0)
-        cell.lblNumberOfFollowers.count(from: 0.0, to: CGFloat(activeUser.followers!), withDuration: 1.0)
-        cell.lblNumberOfGists.count(from: 0.0, to: CGFloat(activeUser.publicGists!), withDuration: 1.0)
-        cell.lblNumberOfFollowing.count(from: 0.0, to: CGFloat(activeUser.following!), withDuration: 1.0)
-    }
-
 }

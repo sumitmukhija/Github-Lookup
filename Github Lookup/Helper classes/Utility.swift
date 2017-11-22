@@ -77,6 +77,27 @@ class Utility {
         return "Date not found!"
     }
     
+    class func convertBookmarkToUser(bookmark: Bookmark) -> User
+    {
+        let user = User()
+        user.avatarUrl = bookmark.avatarUrl
+        user.bio = bookmark.bio
+        user.company = bookmark.company
+        user.email = bookmark.email
+        user.followers = Int(bookmark.followers)
+        user.followersUrl = bookmark.followersUrl!
+        user.following = Int(bookmark.following)
+        user.followingUrl = bookmark.followingUrl
+        user.htmlUrl = bookmark.htmlUrl
+        user.location = bookmark.location
+        user.login = bookmark.login
+        user.publicRepos = Int(bookmark.publicRepos)
+        user.publicGists = Int(bookmark.publicGists)
+        user.updatedAt = bookmark.updatedAt
+        user.htmlUrl = bookmark.htmlUrl
+        return user
+    }
+    
     class func isInternetAvailable() -> Bool {
         
         var zeroAddress = sockaddr_in()
