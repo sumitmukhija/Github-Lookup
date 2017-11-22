@@ -5,7 +5,7 @@ A basic GitHub user API consuming iOS application written in Swift 3 using XCode
 # Problem statement
 Develop a pseudo iOS application which would let users help search and analyse Github users conveniently.
 
-#Development Environment
+# Development Environment
 <ul>
 <li> Xcode 8 </li>
 <li> Swift 3 </li>
@@ -14,18 +14,18 @@ Develop a pseudo iOS application which would let users help search and analyse G
 #YouTube video demo
 <a href="https://www.youtube.com/watch?v=CMQxZ81yBZg"><img src="https://preview.ibb.co/fBMBq6/Screen_Shot_2017_11_22_at_4_24_38_PM.png" alt="Screen_Shot_2017_11_22_at_4_24_38_PM" border="0"></a>
 
-#Screenshots
+# Screenshots
 
 <img src="https://preview.ibb.co/gxv1OR/GH.jpg" alt="GH" border="0">
 
-#Features
+# Features
 <ul>
 <li> Application uses Core data to store the bookmarked profiles locally</li>
 <li> Application allows you to share a searched profile</li>
 <li> Application allows you to put content in pasteboard from search history</li>
 </ul>
 
-#Third parties
+# Third parties
 <ul>
 <li> <a href ="https://github.com/Alamofire/Alamofire">Alamofire</a> </li>
 <li> <a href ="https://github.com/dataxpress/UICountingLabel">UICountingLabel</a></li>
@@ -34,10 +34,10 @@ Develop a pseudo iOS application which would let users help search and analyse G
 
 # API endpoints: 
 <ul>
-<li>User details: https://api.github.com/users/[username]</li>li>
+<li>User details: https://api.github.com/users/[username]</li>
 <li>User's followers: https://api.github.com/users/[username]/followers</li>
 </ul>
 
-#Reach out
+# Reach out
 email: sumitmukhija@hotmail.com
 LinkedIn:  https://www.linkedin.com/in/sumitmukhija/
