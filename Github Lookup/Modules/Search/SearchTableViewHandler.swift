@@ -91,6 +91,9 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
         
         let bookmarkAction = UIAlertAction(title: "Bookmark", style: .default) { (action) in
             
+            
+            
+            UserDefaultsHelper.addSavedCount()
         }
         
         let viewAction = UIAlertAction(title: "View", style: .default) { (action) in
@@ -142,9 +145,9 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource, UISe
         cell.lblNumberOfFollowers.format = "%d"
         cell.lblNumberOfGists.format = "%d"
         cell.lblNumberOfFollowing.format = "%d"
-        cell.lblNumberOfRepos.count(from: 0.0, to: CGFloat(activeUser.publicRepos!), withDuration: 2.0)
-        cell.lblNumberOfFollowers.count(from: 0.0, to: CGFloat(activeUser.followers!), withDuration: 2.0)
-        cell.lblNumberOfGists.count(from: 0.0, to: CGFloat(activeUser.publicGists!), withDuration: 2.0)
-        cell.lblNumberOfFollowing.count(from: 0.0, to: CGFloat(activeUser.following!), withDuration: 2.0)
+        cell.lblNumberOfRepos.count(from: 0.0, to: CGFloat(activeUser.publicRepos!), withDuration: 1.0)
+        cell.lblNumberOfFollowers.count(from: 0.0, to: CGFloat(activeUser.followers!), withDuration: 1.0)
+        cell.lblNumberOfGists.count(from: 0.0, to: CGFloat(activeUser.publicGists!), withDuration: 1.0)
+        cell.lblNumberOfFollowing.count(from: 0.0, to: CGFloat(activeUser.following!), withDuration: 1.0)
     }
 }

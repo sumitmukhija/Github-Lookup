@@ -22,7 +22,7 @@ class FollowListCell: UITableViewCell
 class FollowListViewController: BaseTabViewController, UITableViewDelegate, UITableViewDataSource {
     
     let imageCache = NSCache<NSString, UIImage>()
-
+    
     @IBOutlet weak var followTableView: UITableView!
     
     var dataSource: Array<User>?
@@ -36,6 +36,14 @@ class FollowListViewController: BaseTabViewController, UITableViewDelegate, UITa
         followTableView.showsVerticalScrollIndicator = false
         followTableView.delegate = self
         followTableView.dataSource = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if operationMode == OPMODE.FOLLOWING
+        {
+            Utility.showInfoAlert(msg: "The feature is not supported by the API yet!")
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -63,6 +71,7 @@ class FollowListViewController: BaseTabViewController, UITableViewDelegate, UITa
         }
         return cell
     }
+
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100

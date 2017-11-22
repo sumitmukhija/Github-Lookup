@@ -11,6 +11,16 @@ import UIKit
 extension SearchViewController
 {
     @objc(collectionView:didSelectItemAtIndexPath:) func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch indexPath.row
+        {
+        case 0:
+            self.tabBarController?.selectedIndex = 2
+            break
+        case 1:
+            self.tabBarController?.selectedIndex = 1
+            break
+        default: break
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
