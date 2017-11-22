@@ -15,8 +15,9 @@ Develop a pseudo iOS application which would let users help search and analyse G
 <a href="https://www.youtube.com/watch?v=CMQxZ81yBZg"><img src="https://preview.ibb.co/fBMBq6/Screen_Shot_2017_11_22_at_4_24_38_PM.png" alt="Screen_Shot_2017_11_22_at_4_24_38_PM" border="0"></a>
 
 # Screenshots
-
-<img src="https://preview.ibb.co/gxv1OR/GH.jpg" alt="GH" border="0">
+<p style="text-align: center;">
+  <img src="https://preview.ibb.co/gxv1OR/GH.jpg" alt="GH" border="0">
+</p>
 
 # Features
 <ul>
